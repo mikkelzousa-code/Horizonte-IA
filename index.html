@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizonte IA - Domina el Futuro con Inteligencia Artificial</title>
+    <!-- Fuentes premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ESTILO BASE Y DISEÑO PREMIUM */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #05070a;
+            color: #cbd5e1;
+            font-family: 'Urbanist', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ANIMACIÓN DE ENTRADA AL EMPEZAR LA PÁGINA */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated-hero {
+            animation: fadeInUp 1.2s ease-out forwards;
+        }
+
+        /* HEADER / HERO SECTION */
+        header {
+            padding: 120px 0 90px 0;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18) 0%, transparent 75%);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: #38bdf8;
+            letter-spacing: 4px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 46px;
+            color: #ffffff;
+            margin-bottom: 24px;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 21px;
+            color: #94a3b8;
+            max-width: 850px;
+            margin: 0 auto 45px auto;
+            font-weight: 300;
+        }
+
+        /* CONTENEDOR DEL FORMULARIO */
+        .form-section {
+            background: linear-gradient(145deg, rgba(10, 14, 20, 0.9) 0%, rgba(5, 7, 10, 0.95) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 24px;
+            padding: 35px 25px;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(56, 189, 248, 0.05);
+        }
+
+        /* Ajuste responsivo para el iframe de Brevo */
+        .brevo-wrapper {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .brevo-iframe {
+            width: 100%;
+            max-width: 100%;
+            border: 0;
+            display: block;
+        }
+
+        /* SECCIONES DE INFORMACIÓN */
+        .info-section {
+            padding: 100px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .info-section.alt-bg {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(56, 189, 248, 0.015) 50%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 34px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .section-intro {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 17px;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        .info-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 35px;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .info-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #38bdf8;
+            font-size: 19px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card p strong {
+            color: #ffffff;
+        }
+
+        .app-badge {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            font-size: 12px;
+            font-family: 'Orbitron', sans-serif;
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        /* SECCIÓN DE TESTIMONIOS */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .testimonial-card {
+            background: rgba(10, 14, 20, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #cbd5e1;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-family: 'Orbitron', sans-serif;
+            color: #38bdf8;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .testimonial-role {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+        /* SECCIÓN DE MONETIZACIÓN (10 TARJETAS SIMÉTRICAS) */
+        .courses-section {
+            padding: 100px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .courses-intro {
+            font-size: 19px;
+            color: #94a3b8;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+        }
+
+        .grid-courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: linear-gradient(145deg, #0a0e14 0%, #030508 100%);
+            border: 1px solid rgba(56, 189, 248, 0.12);
+            border-radius: 24px;
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .course-card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 20px 40px rgba(56, 189, 248, 0.08);
+            transform: translateY(-8px);
+        }
+
+        .course-card:hover::before {
+            opacity: 1;
+        }
+
+        .course-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            min-height: 56px;
+        }
+
+        .course-card p {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .btn-course {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+            color: #05070a;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+        }
+
+        .btn-course:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+        }
+
+        /* ESTILOS ADICIONALES PARA TUTORIAL Y ESTRUCTURA DE PROMPTS */
+        .prompt-box {
+            background: rgba(10, 14, 20, 0.6);
+            border: 1px dashed rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: monospace;
+            color: #38bdf8;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 0;
+            color: #64748b;
+            font-size: 15px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. EL GANCHO Y REGISTRO (PUNTO DE PARTIDA CON ANIMACIÓN) -->
+    <header class="animated-hero">
+        <div class="container">
+            <div class="logo">Horizonte IA</div>
+            <h1>Aprende a Dominar la Inteligencia Artificial de Forma Sencilla</h1>
+            <p class="subtitle">Descubre cómo la IA está transformando industrias enteras. Desarrolla habilidades prácticas y profesionales para optimizar tu tiempo, destacar en el mercado laboral y abrir nuevas líneas de negocio legítimas basándote en el conocimiento, la constancia y el trabajo real.</p>
+            
+            <!-- CONTENEDOR DEL FORMULARIO CON EL IFRAME DE BREVO INTEGRADO -->
+            <div class="form-section">
+                <div class="brevo-wrapper">
+                    <iframe class="brevo-iframe" height="305" src="https://49530b53.sibforms.com/v2/serve/MUIFADzIb15m-N1Ar8cV5r4ZWsa7F5Y11TBPqCY6eO3aByIrtQ3AOey-wx6K40xH6KT2sAr4dB5xaF3BowVBfquDvXqqrgtGNWMiUR2Ehh_OY6NYiQc8JfSi7zqr99p0PRso0QoVrPSyK7LG38VkUL0Z9DW-R_QOV4E4mAAG-LacNkWpPEKZOWf2PSECfsvlf0oeohD5fgpRWDU6Zw==" scrolling="auto" allowfullscreen></iframe>
+                </div>
+                <p style="font-size: 14px; color:#64748b; margin-top: 15px;">Regístrate de forma gratuita para recibir tu acceso inmediato a la guía introductoria en PDF.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. CONCEPTOS BÁSICOS (EL PRIMER ESCALÓN) -->
+    <section class="info-section">
+        <div class="container">
+            <h2>El ABC de la Inteligencia Artificial</h2>
+            <p class="section-intro">Desmitifiquemos la tecnología. La Inteligencia Artificial no es magia; es matemáticas avanzadas, potencia de cómputo y flujos de datos estructurados para resolver problemas complejos.</p>
+            
+            <div class="grid-info">
+                <div class="info-card">
+                    <h3><span>⚡</span> ¿Qué es la IA realmente?</h3>
+                    <p>Olvida los robots con conciencia de la ciencia ficción. En la práctica, la Inteligencia Artificial es un campo de la informática que desarrolla sistemas capaces de procesar grandes cantidades de datos, identificar patrones ocultos y ejecutar tareas complejas. <strong>Analogía simple:</strong> Piensa en la IA como un asistente analítico ultra veloz; no "piensa" como un humano, sino que calcula probabilidades a la velocidad de la luz para arrojar la mejor respuesta posible basándose en su entrenamiento previo.</p>
+                </div>
+                <div class="info-card">
+                    <h3><span>📊</span> IA Tradicional (Predictiva)</h3>
+                    <p>Es la tecnología analítica subyacente que llevas usando años. Su especialidad consiste en estudiar el comportamiento histórico de los datos para predecir eventos futuros o clasificar información. Un caso real y diario ocurre cuando abres plataformas como Netflix o Spotify: el sistema no adivina tus gustos artísticos, sino que procesa matemáticamente las elecciones de millones de usuarios similares a ti para estimar con precisión matemática cuál será la siguiente canción o película que retendrá tu atención.</p>
+                </div>
+                <div class="info-card">
+                    <h3><span>🎨</span> IA Generativa (La Revolución)</h3>
+                    <p>El salto disruptivo de nuestra década. A diferencia de la IA tradicional que solo clasifica o predice sobre datos existentes, la IA generativa utiliza complejas estructuras matemáticas para <strong>producir contenido completamente original e inédito</strong> a partir de una instrucción textual. Es el motor detrás de la creación instantánea de código limpio, documentos corporativos estructurados, ilustraciones de alta fidelidad o locuciones artificiales hiperrealistas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. LA EVOLUCIÓN HISTÓRICA DE LA IA -->
+    <section class="info-section alt-bg">
+        <div class="container">
+            <h2>La Evolución del Pensamiento Digital</h2>
+            <p class="section-intro">La inteligencia artificial actual es el resultado de más de siete décadas de hitos científicos fundamentales, esfuerzo académico e innovación constante:</p>
+            
+            <div class="grid-info">
+                <div class="info-card">
+                    <h3>1950 - El Origen Teórico</h3>
+                    <p>El matemático británico Alan Turing publica su artículo académico "Computing Machinery and Intelligence", planteando formalmente la revolucionaria interrogante: <em>"¿Pueden pensar las máquinas?"</em>. Diseñó el Test de Turing, un marco conceptual que determina si una máquina es inteligente basándose en su capacidad de imitar una conversación humana al punto de ser indistinguible de un operador real.</p>
+                </div>
+                <div class="info-card">
+                    <h3>1997 - El Gran Hito</h3>
+                    <p>La supercomputadora de cálculo masivo desarrollada por IBM, conocida como <strong>Deep Blue</strong>, derrota en una partida oficial de ajedrez al campeón mundial reinante Garry Kasparov. Este momento histórico demostró al mundo entero que los algoritmos lógicos estructurados podían superar las capacidades estratégicas y de toma de decisiones del cerebro humano en entornos cerrados gobernados por reglas específicas.</p>
+                </div>
+                <div class="info-card">
+                    <h3>2022 - La Era Generativa</h3>
+                    <p>El lanzamiento abierto de ChatGPT por parte de OpenAI democratiza la inteligencia artificial a escala global. Por primera vez en la historia de la informática, el software predictivo avanzado deja de ser de uso exclusivo para laboratorios de datos o corporaciones transnacionales y pasa a estar disponible para optimizar las tareas cotidianas de cualquier profesional con acceso a internet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. LOS 4 GRANDES TIPOS DE IA -->
+    <section class="info-section">
+        <div class="container">
+            <h2>Los 4 Tipos de Inteligencia Artificial</h2>
+            <p class="section-intro">Desde una perspectiva puramente científica e ingenieril, la IA se clasifica en cuatro fases de desarrollo evolutivo bien marcadas:</p>
+            
+            <div class="grid-info">
+                <div class="info-card">
+                    <h3>1. Máquinas Reactivas</h3>
+                    <p>Son los sistemas más primitivos y limitados. Carecen por completo de memoria histórica, lo que significa que no pueden almacenar experiencias previas para tomarlas como base en decisiones futuras. Actúan bajo una relación estricta de causa y efecto. Un ejemplo clásico es Deep Blue de IBM, la cual analizaba el estado exacto de las piezas del ajedrez en el tablero en el tiempo presente, sin evaluar el historial emocional de las jugadas anteriores.</p>
+                </div>
+                <div class="info-card">
+                    <h3>2. Memoria Limitada</h3>
+                    <p>Son los sistemas que dominan el mercado comercial de la actualidad. Tienen la capacidad de registrar datos históricos durante un periodo de tiempo acotado para aprender de ellos y tomar decisiones adaptativas inmediatas. Un ejemplo real son los vehículos de conducción autónoma de Tesla, los cuales almacenan momentáneamente la velocidad de los coches circundantes, la posición de los peatones y las marcas del carril para ajustar su rumbo.</p>
+                </div>
+                <div class="info-card">
+                    <h3>3. Teoría de la Mente</h3>
+                    <p>Una frontera tecnológica que se encuentra bajo intensa investigación y desarrollo conceptual. Se refiere a sistemas capaces de comprender las sutilezas psicológicas humanas: nuestros sentimientos, expectativas, sesgos culturales y motivaciones internas. El objetivo principal es lograr que los asistentes virtuales y la robótica del mañana puedan entablar dinámicas de socialización y empatía verdaderas con los usuarios humanos.</p>
+                </div>
+                <div class="info-card">
+                    <h3>4. Autoconciencia</h3>
+                    <p>El último peldaño evolutivo, puramente hipotético y teórico. Representaría a una Inteligencia Artificial que no solo comprende estados emocionales externos, sino que posee conciencia de su propia existencia, tiene sentimientos propios, autocrítica, deseos independientes y necesidades autónomas. Actualmente, este concept pertenece de forma exclusiva a las narrativas de la ciencia ficción cinematográfica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. GLOSARIO E INTRODUCCIÓN TÉCNICA -->
+    <section class="info-section alt-bg">
+        <div class="container">
+            <h2>Conceptos Clave del Mundo Digital</h2>
+            <p class="section-intro">Para comprender el lenguaje de la industria y moverte con soltura profesional, es vital dominar el significado técnico de sus pilares más importantes:</p>
+            
+            <div class="grid-info">
+                <div class="info-card">
+                    <h3>Machine Learning</h3>
+                    <p><strong>Aprendizaje Automático.</strong> Es la rama de la IA dedicada a hacer que las computadoras aprendan de forma autónoma sin necesidad de ser programadas con instrucciones explícitas de código estático. En su lugar, se diseñan algoritmos que estudian bases de datos masivas, extraen sus patrones matemáticos internos de forma automatizada y mejoran su precisión con cada ciclo de procesamiento.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Deep Learning</h3>
+                    <p><strong>Aprendizaje Profundo.</strong> Una subcategoría avanzada del Machine Learning basada en el diseño de redes neuronales artificiales profundas. Se estructura mediante múltiples capas de procesamiento numérico capaces de extraer características abstractas y masivas de archivos sumamente complejos, tales como archivos de audio crudos, video en tiempo real o documentos de texto sin estructurar.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Redes Neuronales Artificiales</h3>
+                    <p>Modelos matemáticos computacionales inspirados directamente en la interconexión de las neuronas biológicas del cerebro humano. Consisten en miles de nodos (neuronas artificiales) organizados en capas que se transmiten señales ponderadas numéricamente entre sí, ajustando su peso matemático de forma iterativa cada vez que cometen un error de predicción.</p>
+                </div>
+                <div class="info-card">
+                    <h3>NLP (Procesamiento del Lenguaje Natural)</h3>
+                    <p>La disciplina enfocada en otorgar a las máquinas la capacidad de leer, descifrar, comprender y estructurar el lenguaje humano conversacional de manera orgánica. Gracias al NLP, sistemas como los Large Language Models (LLMs) pueden captar intenciones, ironías, contextos gramaticales y semánticos complejos en lugar de tratar los textos como simples cadenas de caracteres rígidas.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Visión por Computadora</h3>
+                    <p>El campo de estudio que entrena a las computadoras para interpretar, procesar y extraer información del mundo visual. Mediante el uso de cámaras corporativas y algoritmos de Deep Learning, los sistemas pueden identificar rostros con precisión milimétrica, clasificar objetos en líneas de ensamblaje industrial, detectar anomalías médicas en radiografías y guiar robots autónomos de forma segura.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Ingeniería de Prompts</h3>
+                    <p>El arte y la ciencia de diseñar, estructurar y refinar las instrucciones de texto de entrada que se le envían a un modelo de IA generativa. Los ingenieros de prompts se especializan en formular consultas lógicas optimizadas para extraer el máximo rendimiento de los modelos matemáticos de lenguaje, reduciendo drásticamente las tasas de error o alucinación del software.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. LA IA EN LAS DIFERENTES INDUSTRIAS -->
+    <section class="info-section">
+        <div class="container">
+            <h2>El Impacto de la IA en la Sociedad</h2>
+            <p class="section-intro">La inteligencia artificial ya no es un proyecto de laboratorio para el mañana; es el motor operativo que optimiza los sectores más críticos de la economía global en el presente:</p>
+            
+            <div class="grid-info">
+                <div class="info-card">
+                    <h3>🩺 Medicina de Precisión</h3>
+                    <p>En el sector salud, los algoritmos predictivos actúan como un segundo par de ojos infalibles para los especialistas médicos. La IA es capaz de analizar miles de imágenes diagnósticas (resonancias, tomografías) en segundos, detectando indicios tempranos de patologías crónicas antes de que sean visibles al ojo humano. Además, en los laboratorios farmacológicos, acelera el descubrimiento e investigación de nuevas moléculas químicas operativas, reduciendo los tiempos de experimentación de años a semanas.</p>
+                </div>
+                <div class="info-card">
+                    <h3>💼 Automatización de Negocios</h3>
+                    <p>En el plano corporativo, las empresas implementan IA para erradicar las tareas administrativas repetitivas que consumen el capital humano. Los sistemas automatizados auditan reportes financieros complejos, gestionan inventarios predictivos cruzando históricos de ventas con el clima global y optimizan las complejas cadenas de suministro logístico. Esto permite liberar tiempo de valor para que los equipos humanos se enfoquen en la negociación estratégica y en la innovación de productos.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🎓 Educación Personalizada</h3>
+                    <p>La educación tradicional a menudo sufre por las aulas masivas y estandarizadas. La IA resuelve esto actuando como un tutor privado interactivo e inteligente disponible las 24 horas del día. Los algoritmos educativos evalúan en tiempo real los patrones de aprendizaje, las fortalezas conceptuales y los baches informativos de cada estudiante en particular, adaptando el ritmo, los cuestionarios y el material didáctico para maximizar la retención cognitiva de forma individualizada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. MITOS VS. REALIDADES -->
+    <section class="info-section alt-bg">
+        <div class="container">
+            <h2>Mitos vs. Realidades de la Inteligencia Artificial</h2>
+            <p class="section-intro">La rápida adopción de estas tecnologías ha generado desinformación generalizada. Es momento de separar las narrativas alarmistas de las realidades operativas comprobables:</p>
+            
+            <div class="grid-info">
+                <div class="info-card">
+                    <h3>Mito: "Las máquinas tienen sentimientos"</h3>
+                    <p><strong>Realidad:</strong> Modelos como ChatGPT o Claude redactan textos con un tono que aparenta profunda empatía y raciocinio humano, pero carecen de conciencia biológica, emociones, intenciones o dolor. Sus respuestas no provienen de un alma digital, sino de cálculos probabilísticos ultra sofisticados diseñados para determinar secuencialmente cuál es la palabra más coherente que debe seguir a la anterior basándose en miles de millones de textos indexados.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mito: "La IA nos reemplazará por completo"</h3>
+                    <p><strong>Realidad:</strong> La IA no está destruyendo el empleo en masa, está transformando radicalmente la naturaleza del trabajo operativo. Las herramientas no te quitarán tu puesto laboral; lo hará un profesional de tu mismo sector que entienda cómo utilizarlas para producir el triple de resultados en la mitad de tiempo. La IA potencia las facultades humanas individuales, delegando el procesamiento pesado al software y reservando la creatividad al humano.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mito: "La IA siempre tiene la razón"</h3>
+                    <p><strong>Realidad:</strong> Los modelos de lenguaje masivo padecen un fenómeno técnico denominado "alucinación". Cuando un sistema no posee datos fidedignos u objetivos sobre una consulta extremadamente específica, su algoritmo probabilístico estructurará una respuesta completamente inventada, pero con una redacción lógica y convincente. La supervisión profesional y el pensamiento crítico humano siguen siendo estrictamente obligatorios.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mito: "La IA es una inteligencia universal e infalible"</h3>
+                    <p><strong>Realidad:</strong> Los sistemas actuales corresponden a lo que la ciencia define como IA Débil o Estrecha. Esto significa que son extraordinariamente sobresalientes ejecutando una tarea específica para la cual fueron entrenados de forma directa (por ejemplo, analizar hojas de cálculo o redactar correos), pero son completamente inútiles si se les saca de su marco operativo o si se les pide improvisar fuera de sus datos.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mito: "La IA genera ingresos automáticos sin esfuerzo"</h3>
+                    <p><strong>Realidad:</strong> No existen los ingresos mágicos por internet gracias a la IA. La tecnología no es un cajero automático; es un multiplicador de productividad empresarial. Quienes generan ingresos legítivos usándola lo hacen porque la aplican para optimizar flujos reales: redactar mejores propuestas comerciales, programar software en tiempo récord o analizar nichos de mercado con datos duros. Requiere estudio y esfuerzo real.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mito: "La IA aprende sola del entorno sin supervisión"</h3>
+                    <p><strong>Realidad:</strong> Los sistemas de IA requieren de un proceso inicial masivo de filtrado, etiquetado y curaduría de datos que es ejecutado minuciosamente por ingenieros y científicos de datos humanos. Sin el entrenamiento estructurado inicial y la constante retroalimentación basada en el comportamiento humano (RLHF), los algoritmos se corromperían rápidamente y perderían toda su utilidad práctica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. GUÍA DE CÓMO ESCRIBIR TU PRIMER PROMPT PROFESIONAL -->
+    <section class="info-section">
+        <div class="container">
+            <h2>Domina el Arte de Dar Instrucciones</h2>
+            <p class="section-intro">La diferencia entre un usuario casual y un profesional de la IA radica exclusivamente en la calidad de sus directrices escritas. A continuación, se detalla la estructura lógica infalible para redactar un <strong>Prompt</strong> de alto rendimiento laboral:</p>
+            
+            <div class="grid-info">
+                <div class="info-card" style="grid-column: span 3; text-align: left;">
+                    <p>Para extraer respuestas profesionales y evitar resultados genéricos o erróneos de los modelos lingüísticos, tu instrucción debe contener estos cuatro pilares clave perfectamente delimitados dentro del texto:</p>
+                    <ul style="margin: 25px 0 25px 25px; color:#cbd5e1;">
+                        <li style="margin-bottom: 12px;"><strong>1. Rol / Identidad Profesional:</strong> Define claramente la especialidad o profesión que el modelo debe adoptar. Esto acota el vocabulario técnico y los sesgos lógicos de la respuesta. <em>(Ejemplo: "Actúa como un consultor senior de negocios y estratega financiero").</em></li>
+                        <li style="margin-bottom: 12px;"><strong>2. Contexto Detallado y Fronteras:</strong> Proporciona todos los antecedentes necesarios sobre el problema, el público objetivo y la situación real. Evita la ambigüedad. <em>(Ejemplo: "Tengo una pequeña empresa de desarrollo de software local que busca migrar al modelo SaaS, pero cuenta con un presupuesto de marketing muy reducido").</em></li>
+                        <li style="margin-bottom: 12px;"><strong>3. Tarea Específica a Ejecutar:</strong> Explica de forma directa la acción exacta que requieres que el sistema realice por ti. Utiliza verbos imperativos. <em>(Ejemplo: "Diseña un plan de acción de 3 pasos lógicos para captar los primeros 10 clientes corporativos").</em></li>
+                        <li style="margin-bottom: 12px;"><strong>4. Formato de Salida y Restricciones:</strong> Determina la estructura estética y visual en la que deseas leer los resultados, el tono conversacional y los límites. <em>(Ejemplo: "Entrega la información organizada en una tabla con columnas dedicadas a: Estrategia, Coste estimado y Métrica de éxito. Utiliza un tono corporativo y persuasivo").</em></li>
+                    </ul>
+                    <p><strong>Ejemplo consolidado de un Prompt Profesional Avanzado:</strong></p>
+                    <div class="prompt-box">
+                        "Actúa como un especialista en retención de talento y recursos humanos. El contexto es que lidero un equipo técnico remoto de 15 desarrolladores de software que están manifestando síntomas de agotamiento laboral debido a entregas consecutivas. Diseña una estrategia de bienestar interno con 4 dinámicas prácticas que no interfieran con el horario de desarrollo de código. Preséntame las propuestas estructuradas en una lista con viñetas, detallando el beneficio esperado y la duración estimada para cada actividad sugerida."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. HERRAMIENTAS GRATUITAS Y SIN LÍMITES -->
+    <section class="info-section alt-bg">
+        <div class="container">
+            <h2>Herramientas de IA 100% Gratuitas</h2>
+            <p class="section-intro">El acceso al ecosistema de la Inteligencia Artificial se ha democratizado por completo. No requieres desembolsar dinero para integrar estas potentes plataformas profesionales en tu día a día laboral:</p>
+            
+            <div class="grid-info">
+                <div class="info-card">
+                    <h3>ChatGPT (OpenAI)</h3>
+                    <p>El estándar internacional en procesamiento de lenguaje natural. Su versión de acceso libre es una herramienta sumamente sólida para redactar borradores de contratos, resumir reportes densos de cientos de páginas, traducir textos técnicos con precisión contextual y servir de soporte lógico en el autoaprendizaje de materias complejas.</p>
+                    <span class="app-badge">Texto y Análisis</span>
+                </div>
+                <div class="info-card">
+                    <h3>Claude (Anthropic)</h3>
+                    <p>Reconocido unánimemente en la industria por poseer una de las redacciones en lenguaje natural más fluidas, orgánicas y con un tono profundamente humano del mercado. Su fuerte radica en la capacidad analítica para desglosar documentos de código lógicos complejos y realizar tareas de redacción que requieran matices narrativos avanzados.</p>
+                    <span class="app-badge">Redacción Creativa</span>
+                </div>
+                <div class="info-card">
+                    <h3>Microsoft Copilot</h3>
+                    <p>Una suite sumamente potente integrada directamente con los motores de búsqueda avanzados de Microsoft. Te otorga acceso sin coste a modelos de procesamiento lingüístico premium de última generación y permite la creación de imágenes comerciales profesionales a partir de simples instrucciones descriptivas en español.</p>
+                    <span class="app-badge">Búsqueda e Imágenes</span>
+                </div>
+                <div class="info-card">
+                    <h3>Canva e IA de Diseño</h3>
+                    <p>La plataforma líder en diseño ágil incorpora un abanico robusto de funciones asistidas por IA en su capa gratuita. Los usuarios pueden expandir encuadres fotográficos mediante relleno generativo, vectorizar elementos, eliminar imperfecciones visuales con un solo clic o traducir piezas de comunicación gráfica en segundos.</p>
+                    <span class="app-badge">Diseño Gráfico</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE TESTIMONIOS -->
+    <section class="info-section">
+        <div class="container">
+            <h2>Casos de Éxito y Experiencias Reales</h2>
+            <p class="section-intro">Descubre cómo profesionales de diversos sectores han utilizado el conocimiento técnico sobre Inteligencia Artificial para potenciar su rendimiento y abrir nuevos horizontes laborales reales:</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Como redactora de contenidos independiente, sentía que pasaba demasiadas horas investigando antes de poder escribir una sola línea. Tras aprender a estructurar prompts avanzados, implementé la IA como mi asistente de investigación inicial. No delegué mi escritura a la máquina, sino que aceleré mi flujo. Ahora atiendo al doble de clientes sin descuidar la calidad."</p>
+                    <div class="testimonial-author">Elena Rostova</div>
+                    <div class="testimonial-role">Redactora Freelance & Copywriter</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Tengo una pequeña tienda de comercio electrónico y el presupuesto para marketing digital siempre era una limitante. Empecé a utilizar herramientas generativas de IA de forma estructurada para programar mis calendarios de publicación, analizar las opiniones de mis compradores y refinar mis anuncios de texto. La conversión mejoró notablemente gracias a la optimización de los datos."</p>
+                    <div class="testimonial-author">Carlos Mendoza</div>
+                    <div class="testimonial-role">Fundador de EcoTienda</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"En mi agencia inmobiliaria perdíamos días valiosos categorizando datos de propiedades y redactando fichas técnicas repetitivas. Diseñamos un flujo interno con automatizaciones básicas de IA y hojas de cálculo. El tiempo de respuesta hacia los clientes interesados cayó drásticamente, permitiéndonos cerrar tratos comerciales mucho más rápido."</p>
+                    <div class="testimonial-author">Javier Ortiz</div>
+                    <div class="testimonial-role">Director de Consultoría Inmobiliaria</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FORMACIÓN AVANZADA -->
+    <section class="courses-section">
+        <div class="container">
+            <h2>Lleva tus Habilidades al Siguiente Nivel</h2>
+            <p class="courses-intro">La teoría básica es solo el punto de partida. Si buscas especializarte, optimizar tus procesos productivos y adquirir competencias técnicas altamente cotizadas en la economía moderna, te sugerimos explorar estos entrenamientos avanzados disponibles en Hotmart. Sin falsas promesas de riqueza instantánea, solo educación rigurosa y aplicable.</p>
+            
+            <div class="grid-courses">
+                <!-- CURSO 1 -->
+                <div class="course-card">
+                    <h3>Programa Experto en Inteligencia Artificial</h3>
+                    <p>Una inmersión profunda y completa en el panorama corporativo actual de la IA. Aprenderás a dominar de extremo a extremo las aplicaciones prácticas que están reconfigurando el mercado global, dotándote de un entendimiento técnico integral apto para liderar la adopción tecnológica en empresas.</p>
+                    <a href="https://go.hotmart.com/E106799285I?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
+                </div>
+
+                <!-- CURSO 2 -->
+                <div class="course-card">
+                    <h3>Masterclass de IA Aplicada</h3>
+                    <p>Un taller enfocado enteramente en la acción y en la optimización de tus flujos diarios de trabajo. Descubre cómo interconectar herramientas avanzadas en tu rutina profesional, eliminando los cuellos de botella operativos y multiplicando tu eficiencia en la gestión de proyectos diarios.</p>
+                    <a href="https://go.hotmart.com/Y106799339O?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
+                </div>
+
+                <!-- CURSO 3 -->
+                <div class="course-card">
+                    <h3>Especialización Profesional en IA</h3>
+                    <p>El programa técnico definitivo para quienes se niegan a ser usuarios promedio. Diseñado específicamente para dominar flujos de trabajo avanzados, lógicas de programación asistidas, desarrollo de automatizaciones complejas y optimización de rendimiento a nivel empresarial.</p>
+                    <a href="https://go.hotmart.com/R106799263S?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
+                </div>
+
+                <!-- CURSO 4 -->
+                <div class="course-card">
+                    <h3>Entrenamiento de Futuro y Tecnología</h3>
+                    <p>Aprende a anticipar con base en datos las tendencias tecnológicas dominantes que marcarán la pauta en los próximos años. Una formación diseñada para consultores y directivos que necesitan blindar su relevancia en el mercado y dominar el ecosistema digital del mañana.</p>
+                    <a href="https://go.hotmart.com/V106799234C?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
+                </div>
+
+                <!-- CURSO 5 -->
+                <div class="course-card">
+                    <h3>Curso Intensivo de Prompts Profesionales</h3>
+                    <p>Aprende las metodologías avanzadas de ingeniería de prompts para dialogar de manera experta con modelos de lenguaje masivo (LLMs). Domina técnicas como Few-Shot Chain-of-Thought para erradicar las alucinaciones de la IA y obtener respuestas de altísima precisión corporativa.</p>
+                    <a href="https://go.hotmart.com/H106799345K?ap=eb1f" target="_blank" class="btn-course">Ver detalles del curso</a>
+                </div>
+
+                <!-- CURSO 6 -->
+                <div class="course-card">
+                    <h3>IA para Marketing Digital</h3>
+                    <p>Descubre cómo aplicar el análisis predictivo y las herramientas generativas para estructurar campañas publicitarias de alto rendimiento. Aprende a segmentar audiencias masivas con datos precisos, optimizar textos persuasivos (copywriting) y estructurar embudos de venta eficientes.</p>
+                    <a href="https://go.hotmart.com/H106799354H?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
+                </div>
+
+                <!-- CURSO 7 -->
+                <div class="course-card">
+                    <h3>Automatización Empresarial con IA</h3>
+                    <p>Aprende a conectar herramientas de IA con tus plataformas operativas diarias (CRM, hojas de cálculo, correos electrónicos). Elimina las tareas administrativas repetitivas de tu negocio estructurando flujos de trabajo autónomos que operan de forma impecable las 24 horas.</p>
+                    <a href="https://go.hotmart.com/W106799221D?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
+                </div>
+
+                <!-- CURSO 8 -->
+                <div class="course-card">
+                    <h3>Generación de Contenido Creativo con IA</h3>
+                    <p>Domina las suites generativas de vanguardia para producir materiales audiovisuales e ilustrativos con calidad comercial. Una formación diseñada para diseñadores, creadores y profesionales de la comunicación que buscan acelerar sus procesos de producción artística.</p>
+                    <a href="https://go.hotmart.com/Y106799252H?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
+                </div>
+
+                <!-- CURSO 9 -->
+                <div class="course-card">
+                    <h3>Análisis de Datos con Machine Learning</h3>
+                    <p>Adquiere la habilidad técnica de traducir filas interminables de datos crudos en decisiones estratégicas de negocio altamente lucrativas. Aprenderás las bases del procesamiento estadístico y algoritmos predictivos para identificar oportunidades comerciales reales.</p>
+                    <a href="https://go.hotmart.com/T106799518U?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
+                </div>
+
+                <!-- CURSO 10 -->
+                <div class="course-card">
+                    <h3>IA aplicada a Finanzas Personales</h3>
+                    <p>Utiliza herramientas analíticas avanzadas para auditar tus flujos de caja, modelar escenarios de ahorro realistas y estructurar proyecciones presupuestarias detalladas. Aprende a delegar el control técnico de tus finanzas en sistemas de datos para una toma de decisiones informada.</p>
+                    <a href="https://go.hotmart.com/X106799512T?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Horizonte IA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
