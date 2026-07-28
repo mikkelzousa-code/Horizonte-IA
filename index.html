@@ -61,7 +61,7 @@
     </style>
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
-    <!-- ESTILOS GENERALES DEL SITIO WEBS "HORIZONTE IA" -->
+    <!-- ESTILOS GENERALES DEL SITIO WEB "HORIZONTE IA" -->
     <style>
         :root {
             --bg-dark: #0f172a;
@@ -100,16 +100,24 @@
             padding: 0 20px;
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             line-height: 1.2;
             margin-bottom: 1rem;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             text-align: center;
             color: var(--primary);
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-desc {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
         }
 
         p {
@@ -142,14 +150,14 @@
             box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
         }
 
-        /* 1. NAVBAR STICKY */
+        /* NAVBAR STICKY */
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 70px;
-            background-color: rgba(15, 23, 42, 0.9);
+            background-color: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
             z-index: 1000;
@@ -210,11 +218,11 @@
 
         .hero p {
             font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
+            max-width: 750px;
+            margin: 0 auto 2.5rem;
         }
 
-        /* CONTENEDOR INTEGRADO DE BREVO EN HERO Y SECCIÓN DE SUSCRIPCIÓN */
+        /* CONTENEDOR BREVO INTEGRADO */
         .brevo-form-container {
             max-width: 540px;
             margin: 0 auto;
@@ -262,6 +270,12 @@
         }
 
         /* GRIDS GENERALES */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -281,7 +295,26 @@
             transform: translateY(-4px);
         }
 
-        /* 3. TUTORIAL DE PROMPTS Y BOTONES JS */
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* BADGES / ETIQUETAS DE CONCEPTOS */
+        .concept-badge {
+            display: inline-block;
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        /* TUTORIAL DE PROMPTS CON BOTONES JS */
         .prompt-comparison {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -348,7 +381,7 @@
             color: #e2e8f0;
         }
 
-        /* 2. TESTIMONIOS Y PRUEBA SOCIAL */
+        /* TESTIMONIOS Y PRUEBA SOCIAL */
         .testimonial-card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -378,7 +411,7 @@
             color: white;
         }
 
-        /* 1. 10 TARJETAS HOTMART */
+        /* TARJETAS HOTMART */
         .grid-courses {
             display: grid;
             grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
@@ -424,9 +457,8 @@
             color: var(--text-muted);
         }
 
-        /* 6. OPTIMIZACIÓN RESPONSIVE */
         @media (max-width: 900px) {
-            .grid-3, .prompt-comparison {
+            .grid-2, .grid-3, .prompt-comparison {
                 grid-template-columns: 1fr;
             }
             .hero h1 {
@@ -440,12 +472,14 @@
 </head>
 <body>
 
-    <!-- 1. NAVBAR STICKY -->
+    <!-- NAVBAR STICKY -->
     <nav class="navbar">
         <div class="container navbar-content">
             <a href="#" class="logo">Horizonte<span>IA</span></a>
             <ul class="nav-links">
-                <li><a href="#fundamentos">Fundamentos</a></li>
+                <li><a href="#guia-inicio">Guía de Inicio</a></li>
+                <li><a href="#conceptos">Conceptos Clave</a></li>
+                <li><a href="#herramientas">Herramientas Recomendadas</a></li>
                 <li><a href="#tutorial">Aprende Prompts</a></li>
                 <li><a href="#testimonios">Comunidad</a></li>
                 <li><a href="#cursos">Cursos Recomendados</a></li>
@@ -456,7 +490,7 @@
     <!-- HERO SECTION -->
     <header class="hero container">
         <h1>Domina la Inteligencia Artificial <br><span>Sin Necesidad de Programar</span></h1>
-        <p>Aprende las bases fundamentales, domina los comandos más efectivos y descubre las mejores herramientas para potenciar tus proyectos digitales.</p>
+        <p>Aprende las bases fundamentales, domina los comandos más efectivos y descubre las mejores herramientas para potenciar tus proyectos digitales desde cero.</p>
 
         <!-- FORMULARIO DE BREVO INTEGRADO EN EL HERO -->
         <div class="brevo-form-container">
@@ -524,29 +558,87 @@
         </div>
     </header>
 
-    <!-- FUNDAMENTOS -->
-    <section id="fundamentos" class="section container">
-        <h2>Fundamentos Clave</h2>
+    <!-- GUÍA DE INICIO RÁPIDO PARA NUEVOS USUARIOS -->
+    <section id="guia-inicio" class="section container">
+        <h2>¿Eres Nuevo en Inteligencia Artificial?</h2>
+        <p class="section-desc">Si es la primera vez que interactúas con modelos de IA, sigue estos 3 pasos sencillos para pasar de principiante a un usuario avanzado.</p>
+        
         <div class="grid-3">
             <div class="card">
-                <h3>¿Qué es un LLM?</h3>
-                <p>Un Modelo de Lenguaje Grande es un sistema de IA entrenado con millones de textos para comprender y generar lenguaje humano con precisión.</p>
+                <span class="concept-badge">Paso 01</span>
+                <h3>Entiende el Rol de la IA</h3>
+                <p>No veas a la IA como un buscador tradicional tipo Google. Mírala como un asistente virtual altamente capacitado al que debes darle instrucciones precisas y contexto claro.</p>
             </div>
             <div class="card">
-                <h3>Ingeniería de Prompts</h3>
-                <p>El arte de estructurar las instrucciones que le das a la IA para obtener respuestas precisas, profesionales y útiles al primer intento.</p>
+                <span class="concept-badge">Paso 02</span>
+                <h3>Estructura tus Preguntas</h3>
+                <p>Para obtener respuestas profesionales, define siempre un <strong>Rol</strong>, el <strong>Contexto</strong> de tu situación, la <strong>Tarea</strong> exacta y el <strong>Formato</strong> en que quieres la respuesta.</p>
             </div>
             <div class="card">
-                <h3>Automatización Digital</h3>
-                <p>Usa la IA para delegar tareas repetitivas, generar contenido en segundos y acelerar el desarrollo de tus negocios en línea.</p>
+                <span class="concept-badge">Paso 03</span>
+                <h3>Aplica la Regla de Iteración</h3>
+                <p>La primera respuesta rara vez es la definitiva. Refina la conversación pidiéndole que corrija el tono, expanda puntos clave o resuma la información en una tabla ejecutable.</p>
             </div>
         </div>
     </section>
 
-    <!-- 3. TUTORIAL DE PROMPTS CON BOTONES DE COPIAR -->
+    <!-- CONCEPTOS CLAVE Y GLOSARIO EDUCATIVO -->
+    <section id="conceptos" class="section container">
+        <h2>Conceptos Fundamentales que Debes Conocer</h2>
+        <p class="section-desc">Entiende la terminología básica para moverte con confianza en el ecosistema de la Inteligencia Artificial.</p>
+
+        <div class="grid-2">
+            <div class="card">
+                <span class="concept-badge">Terminología</span>
+                <h3>¿Qué es un LLM (Large Language Model)?</h3>
+                <p>Es un modelo informático entrenado con volúmenes masivos de texto que procesa y genera lenguaje humano. Es la tecnología detrás de asistentes como ChatGPT, Claude o Gemini.</p>
+            </div>
+            <div class="card">
+                <span class="concept-badge">Metodología</span>
+                <h3>Ingeniería de Prompts</h3>
+                <p>Es la disciplina de diseñar, estructurar y pulir las entradas de texto (prompts) para garantizar que los modelos de lenguaje devuelvan respuestas óptimas y sin errores.</p>
+            </div>
+            <div class="card">
+                <span class="concept-badge">Capacidad</span>
+                <h3>IA Generativa</h3>
+                <p>Rama de la inteligencia artificial enfocada en la creación autónoma de contenidos nuevos (texto, imágenes, audio, video o código) a partir de patrones aprendidos.</p>
+            </div>
+            <div class="card">
+                <span class="concept-badge">Estrategia</span>
+                <h3>Automatización y Agentes</h3>
+                <p>Consiste en conectar asistentes de IA con herramientas externas para realizar flujos de trabajo autónomos sin intervención humana constante (ej. enviar correos o clasificar datos).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERRAMIENTAS RECOMENDADAS PARA CADA ÁREA -->
+    <section id="herramientas" class="section container">
+        <h2>Ecosistema de Herramientas Recomendadas</h2>
+        <p class="section-desc">Descubre las mejores plataformas del mercado clasificadas según el caso de uso que necesites resolver.</p>
+
+        <div class="grid-3">
+            <div class="card">
+                <span class="concept-badge">Texto & Redacción</span>
+                <h3>ChatGPT / Claude</h3>
+                <p>Ideales para redacción de artículos, lluvia de ideas, resúmenes estructurados, análisis de documentos y generación de estrategias de marketing.</p>
+            </div>
+            <div class="card">
+                <span class="concept-badge">Diseño Visual</span>
+                <h3>Midjourney / Canva IA</h3>
+                <p>Crea imágenes fotorrealistas, logotipos, piezas publicitarias e ilustraciones vectoriales completas a partir de descripciones escritas en minutos.</p>
+            </div>
+            <div class="card">
+                <span class="concept-badge">Audio & Narración</span>
+                <h3>ElevenLabs / Whisper</h3>
+                <p>Convierte textos a voces hiperrealistas con entonación natural o transcribe audios de entrevistas y reuniones a texto con total precisión.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TUTORIAL DE PROMPTS CON BOTONES DE COPIAR -->
     <section id="tutorial" class="section container">
         <h2>Aprende a Redactar Prompts Efectivos</h2>
-        <p style="text-align: center; max-width: 600px; margin: 0 auto 30px;">Compara la diferencia entre darle una instrucción vaga a la IA versus una orden profesional bien estructurada.</p>
+        <p class="section-desc">Compara la diferencia entre darle una instrucción vaga a la IA versus una orden profesional bien estructurada.</p>
         
         <div class="prompt-comparison">
             <!-- Mal Ejemplo -->
@@ -576,9 +668,11 @@ Estructura el resultado en una tabla con:
         </div>
     </section>
 
-    <!-- 2. TESTIMONIOS Y PRUEBA SOCIAL -->
+    <!-- TESTIMONIOS Y PRUEBA SOCIAL -->
     <section id="testimonios" class="section container">
         <h2>Casos de Éxito y Opiniones</h2>
+        <p class="section-desc">Descubre cómo otros profesionales y emprendedores están aplicando estas metodologías en sus negocios.</p>
+
         <div class="grid-3">
             <div class="testimonial-card">
                 <p>"Aprender a estructurar prompts cambió por completo la forma en que trabajo. Reduje a la mitad el tiempo que dedicaba a redactar estrategias."</p>
@@ -613,13 +707,12 @@ Estructura el resultado en una tabla con:
         </div>
     </section>
 
-    <!-- 1. SECCIÓN DE MONETIZACIÓN Y CURSOS RECOMENDADOS (HOTMART) -->
+    <!-- SECCIÓN DE MONETIZACIÓN Y CURSOS RECOMENDADOS (HOTMART) -->
     <section id="cursos" class="section container">
         <h2>Cursos Avanzados Recomendados</h2>
-        <p style="text-align: center; max-width: 600px; margin: -20px auto 40px auto;">Acelera tu aprendizaje con los programas de formación mejor valorados del mercado digital.</p>
+        <p class="section-desc">Acelera tu aprendizaje con los programas de formación mejor valorados del mercado digital.</p>
         
         <div class="grid-courses">
-            <!-- 10 Tarjetas Preparadas para Hotmart -->
             <div class="course-card">
                 <div>
                     <h3>Master en Ingeniería de Prompts</h3>
