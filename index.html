@@ -3,77 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizonte IA | Tu Guía Directa a la Inteligencia Artificial</title>
-    
-    <!-- FUENTES Y CSS DE BREVO -->
-    <style>
-      @font-face {
-        font-display: block;
-        font-family: Roboto;
-        src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-      }
-
-      @font-face {
-        font-display: fallback;
-        font-family: Roboto;
-        font-weight: 600;
-        src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
-      }
-
-      @font-face {
-        font-display: fallback;
-        font-family: Roboto;
-        font-weight: 700;
-        src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-      }
-
-      :where(.sib-form-message-panel) {
-        display: none;
-      }
-
-      :where(.sib-form-message-panel .sib-notification__icon) {
-        width: 20px;
-        height: 20px;
-      }
-
-      #sib-container input:-ms-input-placeholder {
-        font-family: Helvetica, sans-serif;
-        text-align: left;
-        color: #c0ccda;
-      }
-
-      #sib-container input::placeholder {
-        font-family: Helvetica, sans-serif;
-        text-align: left;
-        color: #c0ccda;
-      }
-
-      #sib-container textarea::placeholder {
-        font-family: Helvetica, sans-serif;
-        text-align: left;
-        color: #c0ccda;
-      }
-
-      #sib-container a {
-        text-decoration: underline;
-        color: #2BB2FC;
-      }
-    </style>
-    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-
-    <!-- ESTILOS GENERALES DEL SITIO WEB "HORIZONTE IA" -->
+    <title>Guía Completa de Inteligencia Artificial | Conceptos, Historia y Herramientas</title>
     <style>
         :root {
-            --bg-dark: #0f172a;
-            --bg-card: #1e293b;
-            --primary: #38bdf8;
-            --primary-hover: #0284c7;
-            --accent: #818cf8;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: #334155;
-            --error-red: #ef4444;
-            --success-green: #22c55e;
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #0f172a;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --heading-color: #0f172a;
+            --border-color: #e2e8f0;
+            --accent-color: #3b82f6;
         }
 
         * {
@@ -82,758 +23,366 @@
             padding: 0;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding-top: 70px;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
 
-        .container {
-            max-width: 1200px;
+        /* Header & Navegación */
+        header {
+            background: linear-gradient(135deg, var(--secondary-color), #1e293b);
+            color: #ffffff;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
         }
 
-        h1, h2, h3, h4 {
-            line-height: 1.2;
-            margin-bottom: 1rem;
+        nav {
+            background-color: var(--secondary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #334155;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #f1f5f9;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-color);
         }
 
         h2 {
-            font-size: 2.2rem;
-            text-align: center;
-            color: var(--primary);
+            color: var(--heading-color);
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
         }
 
-        .section-desc {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            color: var(--text-muted);
-            font-size: 1.1rem;
+        h3 {
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem 0;
         }
 
         p {
-            color: var(--text-muted);
             margin-bottom: 1rem;
         }
 
-        .section {
-            padding: 80px 0;
-            border-bottom: 1px solid var(--border-color);
+        /* Línea del Tiempo - Historia */
+        .timeline {
+            position: relative;
+            border-left: 3px solid var(--primary-color);
+            margin: 1.5rem 0 1.5rem 1rem;
+            padding-left: 1.5rem;
         }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--primary);
-            color: var(--bg-dark);
-            font-weight: 700;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            text-align: center;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-        }
-
-        /* NAVBAR STICKY */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 70px;
-            background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--text-main);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--primary);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* HERO SECTION */
-        .hero {
-            text-align: center;
-            padding: 80px 0 60px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
+        .timeline-item {
             margin-bottom: 1.5rem;
-        }
-
-        .hero h1 span {
-            color: var(--primary);
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 750px;
-            margin: 0 auto 2.5rem;
-        }
-
-        /* CONTENEDOR BREVO INTEGRADO */
-        .brevo-form-container {
-            max-width: 540px;
-            margin: 0 auto;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .sib-form {
-            background-color: transparent !important;
-            padding: 0 !important;
-        }
-
-        #sib-container {
-            background-color: var(--bg-card) !important;
-            border-color: var(--border-color) !important;
-            border-radius: 12px !important;
-            padding: 24px !important;
-        }
-
-        #sib-container .entry__label {
-            color: var(--text-main) !important;
-        }
-
-        #sib-container input.input {
-            background-color: var(--bg-dark) !important;
-            border: 1px solid var(--border-color) !important;
-            color: var(--text-main) !important;
-            border-radius: 6px !important;
-            padding: 12px !important;
-        }
-
-        #sib-container .sib-form-block__button {
-            background-color: var(--primary) !important;
-            color: var(--bg-dark) !important;
-            font-weight: 700 !important;
-            transition: all 0.3s ease !important;
-            padding: 12px 24px !important;
-            border-radius: 6px !important;
-        }
-
-        #sib-container .sib-form-block__button:hover {
-            background-color: var(--primary-hover) !important;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4) !important;
-        }
-
-        /* GRIDS GENERALES */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 24px;
-            transition: border-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: var(--primary);
-            transform: translateY(-4px);
-        }
-
-        .card h3 {
-            color: var(--primary);
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-        }
-
-        /* BADGES / ETIQUETAS DE CONCEPTOS */
-        .concept-badge {
-            display: inline-block;
-            background-color: rgba(56, 189, 248, 0.1);
-            color: var(--primary);
-            font-size: 0.8rem;
-            font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 4px;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-
-        /* TUTORIAL DE PROMPTS CON BOTONES JS */
-        .prompt-comparison {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            margin-top: 30px;
-        }
-
-        .prompt-box {
-            background-color: var(--bg-card);
-            border-radius: 12px;
-            padding: 20px;
             position: relative;
         }
 
-        .prompt-box.bad {
-            border-left: 4px solid var(--error-red);
-        }
-
-        .prompt-box.good {
-            border-left: 4px solid var(--success-green);
-        }
-
-        .prompt-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .prompt-tag {
-            font-size: 0.8rem;
-            font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
-        }
-
-        .prompt-tag.bad { background-color: rgba(239, 68, 68, 0.2); color: var(--error-red); }
-        .prompt-tag.good { background-color: rgba(34, 197, 94, 0.2); color: var(--success-green); }
-
-        .btn-copy {
-            background-color: var(--border-color);
-            color: var(--text-main);
-            border: none;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .btn-copy:hover {
-            background-color: var(--primary);
-            color: var(--bg-dark);
-        }
-
-        pre {
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 15px;
-            border-radius: 8px;
-            white-space: pre-wrap;
-            font-family: monospace;
-            font-size: 0.9rem;
-            color: #e2e8f0;
-        }
-
-        /* TESTIMONIOS Y PRUEBA SOCIAL */
-        .testimonial-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .avatar {
-            width: 48px;
-            height: 48px;
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.1rem;
+            top: 0.3rem;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            background-color: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: var(--primary-color);
+            border: 3px solid #ffffff;
+        }
+
+        .timeline-date {
             font-weight: bold;
-            color: white;
+            color: var(--primary-color);
         }
 
-        /* TARJETAS HOTMART */
-        .grid-courses {
+        /* Tarjetas y Rejillas */
+        .grid {
             display: grid;
-            grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
-        .course-card {
-            background-color: var(--bg-card);
+        .card {
+            background-color: #f8fafc;
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .course-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
-        .course-card h3 {
-            font-size: 1.2rem;
-            color: var(--text-main);
-            margin-bottom: 12px;
+        .card h4 {
+            color: var(--heading-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
-        .course-card p {
-            font-size: 0.9rem;
-            flex-grow: 1;
+        /* Etiqueta de categorías */
+        .badge {
+            display: inline-block;
+            background-color: #e0e7ff;
+            color: #4338ca;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
 
-        .course-card .btn {
-            margin-top: 15px;
-            width: 100%;
+        /* Listas detalladas */
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
         }
 
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
         footer {
-            padding: 40px 0;
             text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-muted);
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            color: #94a3b8;
+            margin-top: 3rem;
         }
 
-        @media (max-width: 900px) {
-            .grid-2, .grid-3, .prompt-comparison {
-                grid-template-columns: 1fr;
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
             }
-            .hero h1 {
-                font-size: 2.2rem;
+            nav ul {
+                flex-direction: column;
+                text-align: center;
             }
-            .nav-links {
-                display: none;
+            section {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR STICKY -->
-    <nav class="navbar">
-        <div class="container navbar-content">
-            <a href="#" class="logo">Horizonte<span>IA</span></a>
-            <ul class="nav-links">
-                <li><a href="#guia-inicio">Guía de Inicio</a></li>
-                <li><a href="#conceptos">Conceptos Clave</a></li>
-                <li><a href="#herramientas">Herramientas Recomendadas</a></li>
-                <li><a href="#tutorial">Aprende Prompts</a></li>
-                <li><a href="#testimonios">Comunidad</a></li>
-                <li><a href="#cursos">Cursos Recomendados</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <header class="hero container">
-        <h1>Domina la Inteligencia Artificial <br><span>Sin Necesidad de Programar</span></h1>
-        <p>Aprende las bases fundamentales, domina los comandos más efectivos y descubre las mejores herramientas para potenciar tus proyectos digitales desde cero.</p>
-
-        <!-- FORMULARIO DE BREVO INTEGRADO EN EL HERO -->
-        <div class="brevo-form-container">
-            <div class="sib-form">
-              <div id="sib-form-container" class="sib-form-container">
-                <div id="error-message" class="sib-form-message-panel" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px; max-width:540px;">
-                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
-                      <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
-                    </svg>
-                    <span class="sib-form-message-panel__inner-text">No hemos podido enviar tu PDF.</span>
-                  </div>
-                </div>
-                <div id="success-message" class="sib-form-message-panel" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#085229; background-color:#e7faf0; border-color:#13ce66; border-radius:3px; max-width:540px;">
-                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
-                      <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
-                    </svg>
-                    <span class="sib-form-message-panel__inner-text">Se enviará tu PDF.</span>
-                  </div>
-                </div>
-                <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px; text-align:center; direction:ltr">
-                  <form id="sib-form" method="POST" action="https://49530b53.sibforms.com/serve/MUIFADzIb15m-N1Ar8cV5r4ZWsa7F5Y11TBPqCY6eO3aByIrtQ3AOey-wx6K40xH6KT2sAr4dB5xaF3BowVBfquDvXqqrgtGNWMiUR2Ehh_OY6NYiQc8JfSi7zqr99p0PRso0QoVrPSyK7LG38VkUL0Z9DW-R_QOV4E4mAAG-LacNkWpPEKZOWf2PSECfsvlf0oeohD5fgpRWDU6Zw==" data-type="subscription">
-                    <div style="padding: 8px 0;">
-                      <div class="sib-form-block" style="font-size:24px; font-weight:700; text-align:center; color:var(--primary); background-color:transparent;">
-                        <p>HORIZONTE IA</p>
-                      </div>
-                    </div>
-                    <div style="padding: 8px 0;">
-                      <div class="sib-form-block" style="font-size:15px; text-align:center; color:var(--text-muted); background-color:transparent;">
-                        <div class="sib-text-form-block">
-                          <p>Suscríbete a nuestra newsletter para recibir tu PDF de regalo y novedades.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div style="padding: 8px 0;">
-                      <div class="sib-input sib-form-block">
-                        <div class="form__entry entry_block">
-                          <div class="form__label-row ">
-                            <label class="entry__label" style="font-weight: 700; text-align: left; font-size:14px; color:var(--text-main);" for="EMAIL" data-required="*">Introduce tu dirección de e-mail</label>
-                            <div class="entry__field" style="margin-top: 8px;">
-                              <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="tuemail@ejemplo.com" data-required="true" required />
-                            </div>
-                          </div>
-                          <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px; margin-top:5px;"></label>
-                        </div>
-                      </div>
-                    </div>
-                    <div style="padding: 8px 0;">
-                      <div class="sib-form-block" style="text-align: center">
-                        <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; font-weight:700; text-align:center; width:100%; border:none; cursor:pointer;" form="sib-form" type="submit">
-                          <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
-                            <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
-                          </svg>
-                          RECIBIR PDF GRATIS
-                        </button>
-                      </div>
-                    </div>
-                    <input type="text" name="email_address_check" value="" class="input--hidden">
-                    <input type="hidden" name="locale" value="es">
-                  </form>
-                </div>
-              </div>
-            </div>
-        </div>
+    <header>
+        <h1>Explorando la Inteligencia Artificial</h1>
+        <p>Una guía completa sobre la evolución, los conceptos clave, las clasificaciones y las mejores herramientas para potenciar el aprendizaje y la productividad.</p>
     </header>
 
-    <!-- GUÍA DE INICIO RÁPIDO PARA NUEVOS USUARIOS -->
-    <section id="guia-inicio" class="section container">
-        <h2>¿Eres Nuevo en Inteligencia Artificial?</h2>
-        <p class="section-desc">Si es la primera vez que interactúas con modelos de IA, sigue estos 3 pasos sencillos para pasar de principiante a un usuario avanzado.</p>
-        
-        <div class="grid-3">
-            <div class="card">
-                <span class="concept-badge">Paso 01</span>
-                <h3>Entiende el Rol de la IA</h3>
-                <p>No veas a la IA como un buscador tradicional tipo Google. Mírala como un asistente virtual altamente capacitado al que debes darle instrucciones precisas y contexto claro.</p>
-            </div>
-            <div class="card">
-                <span class="concept-badge">Paso 02</span>
-                <h3>Estructura tus Preguntas</h3>
-                <p>Para obtener respuestas profesionales, define siempre un <strong>Rol</strong>, el <strong>Contexto</strong> de tu situación, la <strong>Tarea</strong> exacta y el <strong>Formato</strong> en que quieres la respuesta.</p>
-            </div>
-            <div class="card">
-                <span class="concept-badge">Paso 03</span>
-                <h3>Aplica la Regla de Iteración</h3>
-                <p>La primera respuesta rara vez es la definitiva. Refina la conversación pidiéndole que corrija el tono, expanda puntos clave o resuma la información en una tabla ejecutable.</p>
-            </div>
-        </div>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="#historia">Historia y Evolución</a></li>
+            <li><a href="#conceptos">Conceptos Fundamentales</a></li>
+            <li><a href="#tipos">Tipos de IA</a></li>
+            <li><a href="#herramientas">Herramientas Recomendadas</a></li>
+        </ul>
+    </nav>
 
-    <!-- CONCEPTOS CLAVE Y GLOSARIO EDUCATIVO -->
-    <section id="conceptos" class="section container">
-        <h2>Conceptos Fundamentales que Debes Conocer</h2>
-        <p class="section-desc">Entiende la terminología básica para moverte con confianza en el ecosistema de la Inteligencia Artificial.</p>
+    <div class="container">
 
-        <div class="grid-2">
-            <div class="card">
-                <span class="concept-badge">Terminología</span>
-                <h3>¿Qué es un LLM (Large Language Model)?</h3>
-                <p>Es un modelo informático entrenado con volúmenes masivos de texto que procesa y genera lenguaje humano. Es la tecnología detrás de asistentes como ChatGPT, Claude o Gemini.</p>
-            </div>
-            <div class="card">
-                <span class="concept-badge">Metodología</span>
-                <h3>Ingeniería de Prompts</h3>
-                <p>Es la disciplina de diseñar, estructurar y pulir las entradas de texto (prompts) para garantizar que los modelos de lenguaje devuelvan respuestas óptimas y sin errores.</p>
-            </div>
-            <div class="card">
-                <span class="concept-badge">Capacidad</span>
-                <h3>IA Generativa</h3>
-                <p>Rama de la inteligencia artificial enfocada en la creación autónoma de contenidos nuevos (texto, imágenes, audio, video o código) a partir de patrones aprendidos.</p>
-            </div>
-            <div class="card">
-                <span class="concept-badge">Estrategia</span>
-                <h3>Automatización y Agentes</h3>
-                <p>Consiste en conectar asistentes de IA con herramientas externas para realizar flujos de trabajo autónomos sin intervención humana constante (ej. enviar correos o clasificar datos).</p>
-            </div>
-        </div>
-    </section>
+        <!-- SECCIÓN 1: HISTORIA -->
+        <section id="historia">
+            <h2>1. Historia y Evolución de la IA</h2>
+            <p>La Inteligencia Artificial no es un concepto nuevo. Su desarrollo es el resultado de décadas de investigación matemática, computacional y neurocientífica.</p>
 
-    <!-- HERRAMIENTAS RECOMENDADAS PARA CADA ÁREA -->
-    <section id="herramientas" class="section container">
-        <h2>Ecosistema de Herramientas Recomendadas</h2>
-        <p class="section-desc">Descubre las mejores plataformas del mercado clasificadas según el caso de uso que necesites resolver.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">1950 - El Test de Turing</span>
+                    <p>Alan Turing publica su célebre artículo <em>"Computing Machinery and Intelligence"</em>, planteando la pregunta: "¿Pueden las máquinas pensar?" y proponiendo el Test de Turing para medir la inteligencia de una máquina.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">1956 - Conferencia de Dartmouth</span>
+                    <p>John McCarthy, Marvin Minsky, Nathaniel Rochester y Claude Shannon acuñan oficialmente el término <strong>"Inteligencia Artificial"</strong>. Se considera el nacimiento formal de la IA como campo académico.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">décadas de 1970 - 1980 - Los "Inviernos de la IA"</span>
+                    <p>Periodos donde las expectativas exageradas chocaron con la limitación técnica de la época, provocando recortes masivos en financiamiento e investigación.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">1997 - Deep Blue vs. Kasparov</span>
+                    <p>La supercomputadora Deep Blue de IBM vence al campeón mundial de ajedrez Garry Kasparov, demostrando el poder del procesamiento lógico y la búsqueda heurística masiva.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2012 - La Revolución del Deep Learning</span>
+                    <p>La red neuronal AlexNet gana la competencia ImageNet con una precisión sorprendente, marcando el auge del Aprendizaje Profundo gracias al uso de GPUs y grandes volúmenes de datos.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2022 en adelante - La Era de la IA Generativa</span>
+                    <p>El lanzamiento masivo de modelos de lenguaje (LLMs) como ChatGPT y generadores de imagen/código democratizan el acceso a la IA a nivel global.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="grid-3">
-            <div class="card">
-                <span class="concept-badge">Texto & Redacción</span>
-                <h3>ChatGPT / Claude</h3>
-                <p>Ideales para redacción de artículos, lluvia de ideas, resúmenes estructurados, análisis de documentos y generación de estrategias de marketing.</p>
-            </div>
-            <div class="card">
-                <span class="concept-badge">Diseño Visual</span>
-                <h3>Midjourney / Canva IA</h3>
-                <p>Crea imágenes fotorrealistas, logotipos, piezas publicitarias e ilustraciones vectoriales completas a partir de descripciones escritas en minutos.</p>
-            </div>
-            <div class="card">
-                <span class="concept-badge">Audio & Narración</span>
-                <h3>ElevenLabs / Whisper</h3>
-                <p>Convierte textos a voces hiperrealistas con entonación natural o transcribe audios de entrevistas y reuniones a texto con total precisión.</p>
-            </div>
-        </div>
-    </section>
+        <!-- SECCIÓN 2: CONCEPTOS -->
+        <section id="conceptos">
+            <h2>2. Conceptos Fundamentales</h2>
+            <p>Para entender el funcionamiento de las tecnologías actuales, es clave dominar estos conceptos base:</p>
 
-    <!-- TUTORIAL DE PROMPTS CON BOTONES DE COPIAR -->
-    <section id="tutorial" class="section container">
-        <h2>Aprende a Redactar Prompts Efectivos</h2>
-        <p class="section-desc">Compara la diferencia entre darle una instrucción vaga a la IA versus una orden profesional bien estructurada.</p>
-        
-        <div class="prompt-comparison">
-            <!-- Mal Ejemplo -->
-            <div class="prompt-box bad">
-                <div class="prompt-header">
-                    <span class="prompt-tag bad">Ejemplo Vago / Básico</span>
+            <div class="grid">
+                <div class="card">
+                    <h4>Inteligencia Artificial (IA)</h4>
+                    <p>El campo general de las ciencias de la computación dedicado a crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana.</p>
                 </div>
-                <pre id="prompt-bad">Hazme un plan de contenido para mi negocio de ropa.</pre>
-                <p style="font-size: 0.85rem; margin-top: 10px;"><strong>Resultado:</strong> La IA te dará ideas genéricas que no se adaptan a tu público ni a tus canales de venta.</p>
+                <div class="card">
+                    <h4>Machine Learning (ML)</h4>
+                    <p>Subcampo de la IA enfocado en el desarrollo de algoritmos que aprenden a partir de datos e identifican patrones sin ser programados explícitamente para cada regla.</p>
+                </div>
+                <div class="card">
+                    <h4>Deep Learning (DL)</h4>
+                    <p>Especialización del Machine Learning basada en redes neuronales artificiales profundas que imitan la estructura del cerebro para procesar datos complejos (imágenes, audio, texto).</p>
+                </div>
+                <div class="card">
+                    <h4>Procesamiento del Lenguaje Natural (PLN)</h4>
+                    <p>Rama de la IA encargada de permitir que las computadoras entiendan, interpreten, generen y manipulen el lenguaje humano hablado y escrito.</p>
+                </div>
             </div>
+        </section>
 
-            <!-- Buen Ejemplo -->
-            <div class="prompt-box good">
-                <div class="prompt-header">
-                    <span class="prompt-tag good">Ejemplo Profesional / Avanzado</span>
-                    <button class="btn-copy" onclick="copyPrompt('prompt-good', this)">Copiar Prompt</button>
-                </div>
-                <pre id="prompt-good">Actúa como un Experto en Marketing Digital. Crea un plan de contenido mensual para Instagram orientado a una marca de ropa sostenible para jóvenes. 
+        <!-- SECCIÓN 3: TIPOS DE IA -->
+        <section id="tipos">
+            <h2>3. Clasificación y Tipos de IA</h2>
+            <p>La Inteligencia Artificial se puede clasificar según sus capacidades técnicas y según su nivel teórico de desarrollo:</p>
 
-Estructura el resultado en una tabla con: 
-1. Tema de la publicación.
-2. Hook/Gancho inicial.
-3. Formato (Reel, Carrusel, Estático).
-4. Llamado a la Acción (CTA).</pre>
-                <p style="font-size: 0.85rem; margin-top: 10px;"><strong>Resultado:</strong> Una estrategia estructurada, ejecutable e inmediatamente aplicable.</p>
-            </div>
-        </div>
-    </section>
+            <h3>Según sus Capacidades Técnicas</h3>
+            <ul>
+                <li><strong>IA Estrecha o Débil (ANI - Artificial Narrow Intelligence):</strong> Diseñada para realizar una tarea específica con alta precisión (ej. buscadores, reconocimiento facial, traductores). Toda la IA existente hoy pertenece a esta categoría.</li>
+                <li><strong>IA General (AGI - Artificial General Intelligence):</strong> Nivel hipotético donde la máquina posee la capacidad cognitiva de aprender y aplicar inteligencia a cualquier problema al nivel de un ser humano.</li>
+                <li><strong>Superinteligencia Artificial (ASI):</strong> Concepto teórico donde la inteligencia sintética supera ampliamente las capacidades intelectuales combinadas de toda la humanidad.</li>
+            </ul>
 
-    <!-- TESTIMONIOS Y PRUEBA SOCIAL -->
-    <section id="testimonios" class="section container">
-        <h2>Casos de Éxito y Opiniones</h2>
-        <p class="section-desc">Descubre cómo otros profesionales y emprendedores están aplicando estas metodologías en sus negocios.</p>
+            <h3>Según su Funcionamiento Teórico</h3>
+            <div class="grid">
+                <div class="card">
+                    <h4>Máquinas Reactivas</h4>
+                    <p>Sistemas básicos que responden a estímulos presentes. No tienen memoria ni aprenden de experiencias pasadas (ej. Deep Blue).</p>
+                </div>
+                <div class="card">
+                    <h4>Memoria Limitada</h4>
+                    <p>Sistemas que pueden almacenar datos pasados de manera temporal para tomar decisiones en tiempo real (ej. vehículos de conducción autónoma).</p>
+                </div>
+                <div class="card">
+                    <h4>Teoría de la Mente</h4>
+                    <p>Desarrollo futuro hipotético donde las máquinas comprenderán emociones, creencias y procesos mentales humanos para interactuar socialmente.</p>
+                </div>
+                <div class="card">
+                    <h4>Autoconciencia</h4>
+                    <p>El nivel máximo teórico donde el sistema tiene conciencia de su propia existencia y estados internos.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="grid-3">
-            <div class="testimonial-card">
-                <p>"Aprender a estructurar prompts cambió por completo la forma en que trabajo. Reduje a la mitad el tiempo que dedicaba a redactar estrategias."</p>
-                <div class="user-info">
-                    <div class="avatar">MA</div>
-                    <div>
-                        <h4 style="font-size: 0.95rem;">Miguel Ángel C.</h4>
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Consultor Digital</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <p>"Buscaba cursos avanzados para profesionalizarme en IA y las recomendaciones me guiaron directo a lo que necesitaba sin perder dinero."</p>
-                <div class="user-info">
-                    <div class="avatar">LR</div>
-                    <div>
-                        <h4 style="font-size: 0.95rem;">Laura R.</h4>
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Creadora de Contenido</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <p>"La selección de herramientas y recursos que ofrecen es clave para quienes queremos crear productos digitales de forma rápida."</p>
-                <div class="user-info">
-                    <div class="avatar">JS</div>
-                    <div>
-                        <h4 style="font-size: 0.95rem;">Javier S.</h4>
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Emprendedor</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- SECCIÓN 4: HERRAMIENTAS Y APPS RECOMENDADAS -->
+        <section id="herramientas">
+            <h2>4. Herramientas y Aplicaciones Recomendadas</h2>
+            <p>Ecosistema de aplicaciones líderes categorizadas por su caso de uso principal:</p>
 
-    <!-- SECCIÓN DE MONETIZACIÓN Y CURSOS RECOMENDADOS (HOTMART) -->
-    <section id="cursos" class="section container">
-        <h2>Cursos Avanzados Recomendados</h2>
-        <p class="section-desc">Acelera tu aprendizaje con los programas de formación mejor valorados del mercado digital.</p>
-        
-        <div class="grid-courses">
-            <div class="course-card">
-                <div>
-                    <h3>Master en Ingeniería de Prompts</h3>
-                    <p>Aprende a dominar ChatGPT, Claude y LLMs avanzados para automatizar procesos y tareas complejas.</p>
+            <div class="grid">
+                <!-- Texto y Modelos de Lenguaje -->
+                <div class="card">
+                    <span class="badge">Texto y Razonamiento</span>
+                    <h4>ChatGPT (OpenAI)</h4>
+                    <p>Modelo versátil para redacción, análisis de información, lluvia de ideas y resolución de problemas complejos.</p>
                 </div>
-                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
-            </div>
-            <div class="course-card">
-                <div>
-                    <h3>IA Aplicada al E-commerce</h3>
-                    <p>Optimiza tu tienda en línea, descripciones de productos y atención al cliente usando modelos automatizados.</p>
-                </div>
-                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
-            </div>
-            <div class="course-card">
-                <div>
-                    <h3>Creación de Contenido con IA</h3>
-                    <p>Genera imágenes, guiones e ideas virales para redes sociales a una velocidad 10x utilizando Inteligencia Artificial.</p>
-                </div>
-                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
-            </div>
-            <div class="course-card">
-                <div>
-                    <h3>Negocios Digitales y Automatización</h3>
-                    <p>Construye flujos de trabajo inteligentes que trabajen por ti utilizando herramientas no-code e Inteligencia Artificial.</p>
-                </div>
-                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
-            </div>
-            <div class="course-card">
-                <div>
-                    <h3>ChatGPT para Marketing Digital</h3>
-                    <p>Diseña campañas, copys vendedores y estrategias SEO guiadas paso a paso por inteligencia artificial.</p>
-                </div>
-                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
-            </div>
-            <div class="course-card">
-                <div>
-                    <h3>Generación de Imágenes Profesionales</h3>
-                    <p>Domina herramientas de creación visual como Midjourney y DALL-E para diseños publicitarios de alto impacto.</p>
-                </div>
-                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
-            </div>
-            <div class="course-card">
-                <div>
-                    <h3>Agentes de IA y Automatización</h3>
-                    <p>Configura asistentes virtuales capaces de ejecutar tareas autónomas para tu proyecto o negocio.</p>
-                </div>
-                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
-            </div>
-            <div class="course-card">
-                <div>
-                    <h3>SEO Avanzado asistido por IA</h3>
-                    <p>Aumenta el tráfico orgánico de tu sitio web auditando y creando contenido optimizado mediante inteligencia artificial.</p>
-                </div>
-                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
-            </div>
-            <div class="course-card">
-                <div>
-                    <h3>Productividad Extrema con IA</h3>
-                    <p>Organiza tu día a día, resume documentos y delega tus tareas administrativas a asistentes inteligentes.</p>
-                </div>
-                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
-            </div>
-            <div class="course-card">
-                <div>
-                    <h3>Desarrollo Web asistido por IA</h3>
-                    <p>Crea páginas web y herramientas digitales sin conocimientos de programación usando generadores de código de última generación.</p>
-                </div>
-                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- FOOTER -->
+                <div class="card">
+                    <span class="badge">Texto y Codificación</span>
+                    <h4>Claude (Anthropic)</h4>
+                    <p>Sobresale en matices del lenguaje natural, lectura de documentos extensos, programación y sintaxis pulida.</p>
+                </div>
+
+                <div class="card">
+                    <span class="badge">Investigación y Multimodal</span>
+                    <h4>Google Gemini</h4>
+                    <p>Integración profunda con datos en tiempo real, capacidad multimodal para procesar texto, imágenes, audio y video.</p>
+                </div>
+
+                <!-- Diseño e Imagen -->
+                <div class="card">
+                    <span class="badge">Generación de Imagen</span>
+                    <h4>Midjourney / DALL-E 3</h4>
+                    <p>Creación de ilustración, arte digital y assets visuales fotorrealistas a partir de descripciones textuales (prompts).</p>
+                </div>
+
+                <!-- Productividad y Video/Audio -->
+                <div class="card">
+                    <span class="badge">Productividad y Notas</span>
+                    <h4>Notion AI / NotebookLM</h4>
+                    <p>Gestión del conocimiento, resumen masivo de documentos cargados y organización automatizada de proyectos.</p>
+                </div>
+
+                <div class="card">
+                    <span class="badge">Audio y Sintetización</span>
+                    <h4>ElevenLabs</h4>
+                    <p>Plataforma avanzada para la clonación de voz y generación de locuciones hiperrealistas en múltiples idiomas.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Horizonte IA. Todos los derechos reservados.</p>
-        </div>
+        <p>&copy; Guía Educativa de Inteligencia Artificial. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- SCRIPTS DE BREVO Y FUNCIONALIDAD DE COPIAR PROMPTS -->
-    <script>
-      window.REQUIRED_CODE_ERROR_MESSAGE = 'Elige un código de país';
-      window.LOCALE = 'es';
-      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "La información que has proporcionado no es válida. Compruebe el formato del campo e inténtalo de nuevo.";
-      window.REQUIRED_ERROR_MESSAGE = "Este campo no puede quedarse vacío. ";
-      window.GENERIC_INVALID_MESSAGE = "La información que has proporcionado no es válida. Compruebe el formato del campo e inténtalo de nuevo.";
-      window.INVALID_NUMBER = "La información que has proporcionado no es válida. Compruebe el formato del campo e inténtalo de nuevo.";
-      window.INVALID_DATE = "Introduce una fecha válida";
-      window.REQUIRED_MULTISELECT_MESSAGE = 'Selecciona al menos una opción';
-      window.translation = {
-        common: {
-          selectedList: '{quantity} lista seleccionada',
-          selectedLists: '{quantity} listas seleccionadas',
-          selectedOption: '{quantity} seleccionado',
-          selectedOptions: '{quantity} seleccionados',
-        }
-      };
-      var AUTOHIDE = Boolean(0);
-    </script>
-
-    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-
-    <script>
-        function copyPrompt(elementId, buttonElement) {
-            const textToCopy = document.getElementById(elementId).innerText;
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                const originalText = buttonElement.innerText;
-                buttonElement.innerText = '¡Copiado!';
-                buttonElement.style.backgroundColor = 'var(--success-green)';
-                buttonElement.style.color = '#000';
-                
-                setTimeout(() => {
-                    buttonElement.innerText = originalText;
-                    buttonElement.style.backgroundColor = 'var(--border-color)';
-                    buttonElement.style.color = 'var(--text-main)';
-                }, 2000);
-            }).catch(err => {
-                console.error('Error al copiar el texto: ', err);
-            });
-        }
-    </script>
 </body>
 </html>
