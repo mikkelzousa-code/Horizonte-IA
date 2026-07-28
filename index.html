@@ -3,688 +3,744 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizonte IA - Domina el Futuro con Inteligencia Artificial</title>
-    <!-- Fuentes premium -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Horizonte IA | Tu Guía Directa a la Inteligencia Artificial</title>
     
+    <!-- FUENTES Y CSS DE BREVO -->
     <style>
-        /* ESTILO BASE Y DISEÑO PREMIUM */
+      @font-face {
+        font-display: block;
+        font-family: Roboto;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+      }
+
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 600;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+      }
+
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 700;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+      }
+
+      :where(.sib-form-message-panel) {
+        display: none;
+      }
+
+      :where(.sib-form-message-panel .sib-notification__icon) {
+        width: 20px;
+        height: 20px;
+      }
+
+      #sib-container input:-ms-input-placeholder {
+        font-family: Helvetica, sans-serif;
+        text-align: left;
+        color: #c0ccda;
+      }
+
+      #sib-container input::placeholder {
+        font-family: Helvetica, sans-serif;
+        text-align: left;
+        color: #c0ccda;
+      }
+
+      #sib-container textarea::placeholder {
+        font-family: Helvetica, sans-serif;
+        text-align: left;
+        color: #c0ccda;
+      }
+
+      #sib-container a {
+        text-decoration: underline;
+        color: #2BB2FC;
+      }
+    </style>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+    <!-- ESTILOS GENERALES DEL SITIO WEBS "HORIZONTE IA" -->
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --primary: #38bdf8;
+            --primary-hover: #0284c7;
+            --accent: #818cf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --error-red: #ef4444;
+            --success-green: #22c55e;
+        }
+
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: #05070a;
-            color: #cbd5e1;
-            font-family: 'Urbanist', sans-serif;
-            overflow-x: hidden;
-            line-height: 1.7;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: 70px;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
 
-        /* ANIMACIÓN DE ENTRADA AL EMPEZAR LA PÁGINA */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animated-hero {
-            animation: fadeInUp 1.2s ease-out forwards;
-        }
-
-        /* HEADER / HERO SECTION */
-        header {
-            padding: 120px 0 90px 0;
-            text-align: center;
-            background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18) 0%, transparent 75%);
-        }
-
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 30px;
-            font-weight: 700;
-            color: #38bdf8;
-            letter-spacing: 4px;
-            margin-bottom: 24px;
-            text-transform: uppercase;
-            text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-        }
-
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 46px;
-            color: #ffffff;
-            margin-bottom: 24px;
-            line-height: 1.25;
-            letter-spacing: -0.5px;
-        }
-
-        .subtitle {
-            font-size: 21px;
-            color: #94a3b8;
-            max-width: 850px;
-            margin: 0 auto 45px auto;
-            font-weight: 300;
-        }
-
-        /* CONTENEDOR DEL FORMULARIO */
-        .form-section {
-            background: linear-gradient(145deg, rgba(10, 14, 20, 0.9) 0%, rgba(5, 7, 10, 0.95) 100%);
-            border: 1px solid rgba(56, 189, 248, 0.25);
-            border-radius: 24px;
-            padding: 35px 25px;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(56, 189, 248, 0.05);
-        }
-
-        /* Ajuste responsivo para el iframe de Brevo */
-        .brevo-wrapper {
-            width: 100%;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-
-        .brevo-iframe {
-            width: 100%;
-            max-width: 100%;
-            border: 0;
-            display: block;
-        }
-
-        /* SECCIONES DE INFORMACIÓN */
-        .info-section {
-            padding: 100px 0;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .info-section.alt-bg {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(56, 189, 248, 0.015) 50%, rgba(255, 255, 255, 0) 100%);
+        h1, h2, h3 {
+            line-height: 1.2;
+            margin-bottom: 1rem;
         }
 
         h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 34px;
-            color: #ffffff;
-            margin-bottom: 15px;
+            font-size: 2rem;
             text-align: center;
-            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 2.5rem;
         }
 
-        .section-intro {
+        p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--bg-dark);
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
             text-align: center;
-            color: #94a3b8;
-            font-size: 17px;
-            max-width: 800px;
-            margin: 0 auto 50px auto;
+            border: none;
+            cursor: pointer;
         }
 
-        .grid-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
         }
 
-        .info-card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
-            border: 1px solid rgba(255,255,255,0.05);
-            padding: 35px;
-            border-radius: 20px;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-        }
-
-        .info-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(56, 189, 248, 0.4);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .info-card h3 {
-            font-family: 'Orbitron', sans-serif;
-            color: #38bdf8;
-            font-size: 19px;
-            margin-bottom: 15px;
+        /* 1. NAVBAR STICKY */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
             display: flex;
             align-items: center;
-            gap: 10px;
         }
 
-        .info-card p strong {
-            color: #ffffff;
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
         }
 
-        .app-badge {
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            color: #38bdf8;
-            font-size: 12px;
-            font-family: 'Orbitron', sans-serif;
-            padding: 4px 10px;
-            border-radius: 6px;
-            display: inline-block;
-            margin-top: 15px;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            text-decoration: none;
         }
 
-        /* SECCIÓN DE TESTIMONIOS */
-        .testimonials-grid {
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        /* CONTENEDOR INTEGRADO DE BREVO EN HERO Y SECCIÓN DE SUSCRIPCIÓN */
+        .brevo-form-container {
+            max-width: 540px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .sib-form {
+            background-color: transparent !important;
+            padding: 0 !important;
+        }
+
+        #sib-container {
+            background-color: var(--bg-card) !important;
+            border-color: var(--border-color) !important;
+            border-radius: 12px !important;
+            padding: 24px !important;
+        }
+
+        #sib-container .entry__label {
+            color: var(--text-main) !important;
+        }
+
+        #sib-container input.input {
+            background-color: var(--bg-dark) !important;
+            border: 1px solid var(--border-color) !important;
+            color: var(--text-main) !important;
+            border-radius: 6px !important;
+            padding: 12px !important;
+        }
+
+        #sib-container .sib-form-block__button {
+            background-color: var(--primary) !important;
+            color: var(--bg-dark) !important;
+            font-weight: 700 !important;
+            transition: all 0.3s ease !important;
+            padding: 12px 24px !important;
+            border-radius: 6px !important;
+        }
+
+        #sib-container .sib-form-block__button:hover {
+            background-color: var(--primary-hover) !important;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4) !important;
+        }
+
+        /* GRIDS GENERALES */
+        .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
         }
 
-        .testimonial-card {
-            background: rgba(10, 14, 20, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
-            padding: 30px;
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        /* 3. TUTORIAL DE PROMPTS Y BOTONES JS */
+        .prompt-comparison {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .prompt-box {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
             position: relative;
         }
 
-        .testimonial-text {
-            font-style: italic;
-            color: #cbd5e1;
-            font-size: 15px;
-            margin-bottom: 20px;
+        .prompt-box.bad {
+            border-left: 4px solid var(--error-red);
         }
 
-        .testimonial-author {
-            font-family: 'Orbitron', sans-serif;
-            color: #38bdf8;
-            font-size: 14px;
-            font-weight: 700;
+        .prompt-box.good {
+            border-left: 4px solid var(--success-green);
         }
 
-        .testimonial-role {
-            font-size: 12px;
-            color: #64748b;
-            margin-top: 2px;
+        .prompt-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
         }
 
-        /* SECCIÓN DE MONETIZACIÓN (10 TARJETAS SIMÉTRICAS) */
-        .courses-section {
-            padding: 100px 0;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
+        .prompt-tag {
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
         }
 
-        .courses-intro {
-            font-size: 19px;
-            color: #94a3b8;
-            max-width: 800px;
-            margin: 0 auto 60px auto;
+        .prompt-tag.bad { background-color: rgba(239, 68, 68, 0.2); color: var(--error-red); }
+        .prompt-tag.good { background-color: rgba(34, 197, 94, 0.2); color: var(--success-green); }
+
+        .btn-copy {
+            background-color: var(--border-color);
+            color: var(--text-main);
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: background 0.2s;
         }
 
-        .grid-courses {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        .btn-copy:hover {
+            background-color: var(--primary);
+            color: var(--bg-dark);
         }
 
-        .course-card {
-            background: linear-gradient(145deg, #0a0e14 0%, #030508 100%);
-            border: 1px solid rgba(56, 189, 248, 0.12);
-            border-radius: 24px;
-            padding: 40px 25px;
+        pre {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+
+        /* 2. TESTIMONIOS Y PRUEBA SOCIAL */
+        .testimonial-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
         }
 
-        .course-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #38bdf8, #0ea5e9);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* 1. 10 TARJETAS HOTMART */
+        .grid-courses {
+            display: grid;
+            grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
+            gap: 24px;
+        }
+
+        .course-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .course-card:hover {
-            border-color: rgba(56, 189, 248, 0.3);
-            box-shadow: 0 20px 40px rgba(56, 189, 248, 0.08);
-            transform: translateY(-8px);
-        }
-
-        .course-card:hover::before {
-            opacity: 1;
+            border-color: var(--primary);
+            transform: translateY(-5px);
         }
 
         .course-card h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 20px;
-            color: #ffffff;
-            margin-bottom: 20px;
-            line-height: 1.4;
-            min-height: 56px;
+            font-size: 1.2rem;
+            color: var(--text-main);
+            margin-bottom: 12px;
         }
 
         .course-card p {
-            font-size: 14px;
-            color: #94a3b8;
-            margin-bottom: 30px;
+            font-size: 0.9rem;
             flex-grow: 1;
-            line-height: 1.6;
         }
 
-        .btn-course {
-            display: block;
+        .course-card .btn {
+            margin-top: 15px;
             width: 100%;
-            padding: 14px 20px;
-            background: linear-gradient(90deg, #38bdf8, #0ea5e9);
-            color: #05070a;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
-        }
-
-        .btn-course:hover {
-            transform: scale(1.03);
-            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
-        }
-
-        /* ESTILOS ADICIONALES PARA TUTORIAL Y ESTRUCTURA DE PROMPTS */
-        .prompt-box {
-            background: rgba(10, 14, 20, 0.6);
-            border: 1px dashed rgba(56, 189, 248, 0.3);
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 20px;
-            font-family: monospace;
-            color: #38bdf8;
-            font-size: 14px;
-            text-align: left;
         }
 
         footer {
+            padding: 40px 0;
             text-align: center;
-            padding: 50px 0;
-            color: #64748b;
-            font-size: 15px;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* 6. OPTIMIZACIÓN RESPONSIVE */
+        @media (max-width: 900px) {
+            .grid-3, .prompt-comparison {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. EL GANCHO Y REGISTRO (PUNTO DE PARTIDA CON ANIMACIÓN) -->
-    <header class="animated-hero">
-        <div class="container">
-            <div class="logo">Horizonte IA</div>
-            <h1>Aprende a Dominar la Inteligencia Artificial de Forma Sencilla</h1>
-            <p class="subtitle">Descubre cómo la IA está transformando industrias enteras. Desarrolla habilidades prácticas y profesionales para optimizar tu tiempo, destacar en el mercado laboral y abrir nuevas líneas de negocio legítimas basándote en el conocimiento, la constancia y el trabajo real.</p>
-            
-            <!-- CONTENEDOR DEL FORMULARIO CON EL IFRAME DE BREVO INTEGRADO -->
-            <div class="form-section">
-                <div class="brevo-wrapper">
-                    <iframe class="brevo-iframe" height="305" src="https://49530b53.sibforms.com/v2/serve/MUIFADzIb15m-N1Ar8cV5r4ZWsa7F5Y11TBPqCY6eO3aByIrtQ3AOey-wx6K40xH6KT2sAr4dB5xaF3BowVBfquDvXqqrgtGNWMiUR2Ehh_OY6NYiQc8JfSi7zqr99p0PRso0QoVrPSyK7LG38VkUL0Z9DW-R_QOV4E4mAAG-LacNkWpPEKZOWf2PSECfsvlf0oeohD5fgpRWDU6Zw==" scrolling="auto" allowfullscreen></iframe>
+    <!-- 1. NAVBAR STICKY -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="#" class="logo">Horizonte<span>IA</span></a>
+            <ul class="nav-links">
+                <li><a href="#fundamentos">Fundamentos</a></li>
+                <li><a href="#tutorial">Aprende Prompts</a></li>
+                <li><a href="#testimonios">Comunidad</a></li>
+                <li><a href="#cursos">Cursos Recomendados</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero container">
+        <h1>Domina la Inteligencia Artificial <br><span>Sin Necesidad de Programar</span></h1>
+        <p>Aprende las bases fundamentales, domina los comandos más efectivos y descubre las mejores herramientas para potenciar tus proyectos digitales.</p>
+
+        <!-- FORMULARIO DE BREVO INTEGRADO EN EL HERO -->
+        <div class="brevo-form-container">
+            <div class="sib-form">
+              <div id="sib-form-container" class="sib-form-container">
+                <div id="error-message" class="sib-form-message-panel" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px; max-width:540px;">
+                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                      <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                    </svg>
+                    <span class="sib-form-message-panel__inner-text">No hemos podido enviar tu PDF.</span>
+                  </div>
                 </div>
-                <p style="font-size: 14px; color:#64748b; margin-top: 15px;">Regístrate de forma gratuita para recibir tu acceso inmediato a la guía introductoria en PDF.</p>
+                <div id="success-message" class="sib-form-message-panel" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#085229; background-color:#e7faf0; border-color:#13ce66; border-radius:3px; max-width:540px;">
+                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                      <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                    </svg>
+                    <span class="sib-form-message-panel__inner-text">Se enviará tu PDF.</span>
+                  </div>
+                </div>
+                <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px; text-align:center; direction:ltr">
+                  <form id="sib-form" method="POST" action="https://49530b53.sibforms.com/serve/MUIFADzIb15m-N1Ar8cV5r4ZWsa7F5Y11TBPqCY6eO3aByIrtQ3AOey-wx6K40xH6KT2sAr4dB5xaF3BowVBfquDvXqqrgtGNWMiUR2Ehh_OY6NYiQc8JfSi7zqr99p0PRso0QoVrPSyK7LG38VkUL0Z9DW-R_QOV4E4mAAG-LacNkWpPEKZOWf2PSECfsvlf0oeohD5fgpRWDU6Zw==" data-type="subscription">
+                    <div style="padding: 8px 0;">
+                      <div class="sib-form-block" style="font-size:24px; font-weight:700; text-align:center; color:var(--primary); background-color:transparent;">
+                        <p>HORIZONTE IA</p>
+                      </div>
+                    </div>
+                    <div style="padding: 8px 0;">
+                      <div class="sib-form-block" style="font-size:15px; text-align:center; color:var(--text-muted); background-color:transparent;">
+                        <div class="sib-text-form-block">
+                          <p>Suscríbete a nuestra newsletter para recibir tu PDF de regalo y novedades.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding: 8px 0;">
+                      <div class="sib-input sib-form-block">
+                        <div class="form__entry entry_block">
+                          <div class="form__label-row ">
+                            <label class="entry__label" style="font-weight: 700; text-align: left; font-size:14px; color:var(--text-main);" for="EMAIL" data-required="*">Introduce tu dirección de e-mail</label>
+                            <div class="entry__field" style="margin-top: 8px;">
+                              <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="tuemail@ejemplo.com" data-required="true" required />
+                            </div>
+                          </div>
+                          <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px; margin-top:5px;"></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding: 8px 0;">
+                      <div class="sib-form-block" style="text-align: center">
+                        <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; font-weight:700; text-align:center; width:100%; border:none; cursor:pointer;" form="sib-form" type="submit">
+                          <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                            <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                          </svg>
+                          RECIBIR PDF GRATIS
+                        </button>
+                      </div>
+                    </div>
+                    <input type="text" name="email_address_check" value="" class="input--hidden">
+                    <input type="hidden" name="locale" value="es">
+                  </form>
+                </div>
+              </div>
             </div>
         </div>
     </header>
 
-    <!-- 2. CONCEPTOS BÁSICOS (EL PRIMER ESCALÓN) -->
-    <section class="info-section">
-        <div class="container">
-            <h2>El ABC de la Inteligencia Artificial</h2>
-            <p class="section-intro">Desmitifiquemos la tecnología. La Inteligencia Artificial no es magia; es matemáticas avanzadas, potencia de cómputo y flujos de datos estructurados para resolver problemas complejos.</p>
-            
-            <div class="grid-info">
-                <div class="info-card">
-                    <h3><span>⚡</span> ¿Qué es la IA realmente?</h3>
-                    <p>Olvida los robots con conciencia de la ciencia ficción. En la práctica, la Inteligencia Artificial es un campo de la informática que desarrolla sistemas capaces de procesar grandes cantidades de datos, identificar patrones ocultos y ejecutar tareas complejas. <strong>Analogía simple:</strong> Piensa en la IA como un asistente analítico ultra veloz; no "piensa" como un humano, sino que calcula probabilidades a la velocidad de la luz para arrojar la mejor respuesta posible basándose en su entrenamiento previo.</p>
-                </div>
-                <div class="info-card">
-                    <h3><span>📊</span> IA Tradicional (Predictiva)</h3>
-                    <p>Es la tecnología analítica subyacente que llevas usando años. Su especialidad consiste en estudiar el comportamiento histórico de los datos para predecir eventos futuros o clasificar información. Un caso real y diario ocurre cuando abres plataformas como Netflix o Spotify: el sistema no adivina tus gustos artísticos, sino que procesa matemáticamente las elecciones de millones de usuarios similares a ti para estimar con precisión matemática cuál será la siguiente canción o película que retendrá tu atención.</p>
-                </div>
-                <div class="info-card">
-                    <h3><span>🎨</span> IA Generativa (La Revolución)</h3>
-                    <p>El salto disruptivo de nuestra década. A diferencia de la IA tradicional que solo clasifica o predice sobre datos existentes, la IA generativa utiliza complejas estructuras matemáticas para <strong>producir contenido completamente original e inédito</strong> a partir de una instrucción textual. Es el motor detrás de la creación instantánea de código limpio, documentos corporativos estructurados, ilustraciones de alta fidelidad o locuciones artificiales hiperrealistas.</p>
-                </div>
+    <!-- FUNDAMENTOS -->
+    <section id="fundamentos" class="section container">
+        <h2>Fundamentos Clave</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>¿Qué es un LLM?</h3>
+                <p>Un Modelo de Lenguaje Grande es un sistema de IA entrenado con millones de textos para comprender y generar lenguaje humano con precisión.</p>
+            </div>
+            <div class="card">
+                <h3>Ingeniería de Prompts</h3>
+                <p>El arte de estructurar las instrucciones que le das a la IA para obtener respuestas precisas, profesionales y útiles al primer intento.</p>
+            </div>
+            <div class="card">
+                <h3>Automatización Digital</h3>
+                <p>Usa la IA para delegar tareas repetitivas, generar contenido en segundos y acelerar el desarrollo de tus negocios en línea.</p>
             </div>
         </div>
     </section>
 
-    <!-- 3. LA EVOLUCIÓN HISTÓRICA DE LA IA -->
-    <section class="info-section alt-bg">
-        <div class="container">
-            <h2>La Evolución del Pensamiento Digital</h2>
-            <p class="section-intro">La inteligencia artificial actual es el resultado de más de siete décadas de hitos científicos fundamentales, esfuerzo académico e innovación constante:</p>
-            
-            <div class="grid-info">
-                <div class="info-card">
-                    <h3>1950 - El Origen Teórico</h3>
-                    <p>El matemático británico Alan Turing publica su artículo académico "Computing Machinery and Intelligence", planteando formalmente la revolucionaria interrogante: <em>"¿Pueden pensar las máquinas?"</em>. Diseñó el Test de Turing, un marco conceptual que determina si una máquina es inteligente basándose en su capacidad de imitar una conversación humana al punto de ser indistinguible de un operador real.</p>
+    <!-- 3. TUTORIAL DE PROMPTS CON BOTONES DE COPIAR -->
+    <section id="tutorial" class="section container">
+        <h2>Aprende a Redactar Prompts Efectivos</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 30px;">Compara la diferencia entre darle una instrucción vaga a la IA versus una orden profesional bien estructurada.</p>
+        
+        <div class="prompt-comparison">
+            <!-- Mal Ejemplo -->
+            <div class="prompt-box bad">
+                <div class="prompt-header">
+                    <span class="prompt-tag bad">Ejemplo Vago / Básico</span>
                 </div>
-                <div class="info-card">
-                    <h3>1997 - El Gran Hito</h3>
-                    <p>La supercomputadora de cálculo masivo desarrollada por IBM, conocida como <strong>Deep Blue</strong>, derrota en una partida oficial de ajedrez al campeón mundial reinante Garry Kasparov. Este momento histórico demostró al mundo entero que los algoritmos lógicos estructurados podían superar las capacidades estratégicas y de toma de decisiones del cerebro humano en entornos cerrados gobernados por reglas específicas.</p>
+                <pre id="prompt-bad">Hazme un plan de contenido para mi negocio de ropa.</pre>
+                <p style="font-size: 0.85rem; margin-top: 10px;"><strong>Resultado:</strong> La IA te dará ideas genéricas que no se adaptan a tu público ni a tus canales de venta.</p>
+            </div>
+
+            <!-- Buen Ejemplo -->
+            <div class="prompt-box good">
+                <div class="prompt-header">
+                    <span class="prompt-tag good">Ejemplo Profesional / Avanzado</span>
+                    <button class="btn-copy" onclick="copyPrompt('prompt-good', this)">Copiar Prompt</button>
                 </div>
-                <div class="info-card">
-                    <h3>2022 - La Era Generativa</h3>
-                    <p>El lanzamiento abierto de ChatGPT por parte de OpenAI democratiza la inteligencia artificial a escala global. Por primera vez en la historia de la informática, el software predictivo avanzado deja de ser de uso exclusivo para laboratorios de datos o corporaciones transnacionales y pasa a estar disponible para optimizar las tareas cotidianas de cualquier profesional con acceso a internet.</p>
-                </div>
+                <pre id="prompt-good">Actúa como un Experto en Marketing Digital. Crea un plan de contenido mensual para Instagram orientado a una marca de ropa sostenible para jóvenes. 
+
+Estructura el resultado en una tabla con: 
+1. Tema de la publicación.
+2. Hook/Gancho inicial.
+3. Formato (Reel, Carrusel, Estático).
+4. Llamado a la Acción (CTA).</pre>
+                <p style="font-size: 0.85rem; margin-top: 10px;"><strong>Resultado:</strong> Una estrategia estructurada, ejecutable e inmediatamente aplicable.</p>
             </div>
         </div>
     </section>
 
-    <!-- 4. LOS 4 GRANDES TIPOS DE IA -->
-    <section class="info-section">
-        <div class="container">
-            <h2>Los 4 Tipos de Inteligencia Artificial</h2>
-            <p class="section-intro">Desde una perspectiva puramente científica e ingenieril, la IA se clasifica en cuatro fases de desarrollo evolutivo bien marcadas:</p>
-            
-            <div class="grid-info">
-                <div class="info-card">
-                    <h3>1. Máquinas Reactivas</h3>
-                    <p>Son los sistemas más primitivos y limitados. Carecen por completo de memoria histórica, lo que significa que no pueden almacenar experiencias previas para tomarlas como base en decisiones futuras. Actúan bajo una relación estricta de causa y efecto. Un ejemplo clásico es Deep Blue de IBM, la cual analizaba el estado exacto de las piezas del ajedrez en el tablero en el tiempo presente, sin evaluar el historial emocional de las jugadas anteriores.</p>
-                </div>
-                <div class="info-card">
-                    <h3>2. Memoria Limitada</h3>
-                    <p>Son los sistemas que dominan el mercado comercial de la actualidad. Tienen la capacidad de registrar datos históricos durante un periodo de tiempo acotado para aprender de ellos y tomar decisiones adaptativas inmediatas. Un ejemplo real son los vehículos de conducción autónoma de Tesla, los cuales almacenan momentáneamente la velocidad de los coches circundantes, la posición de los peatones y las marcas del carril para ajustar su rumbo.</p>
-                </div>
-                <div class="info-card">
-                    <h3>3. Teoría de la Mente</h3>
-                    <p>Una frontera tecnológica que se encuentra bajo intensa investigación y desarrollo conceptual. Se refiere a sistemas capaces de comprender las sutilezas psicológicas humanas: nuestros sentimientos, expectativas, sesgos culturales y motivaciones internas. El objetivo principal es lograr que los asistentes virtuales y la robótica del mañana puedan entablar dinámicas de socialización y empatía verdaderas con los usuarios humanos.</p>
-                </div>
-                <div class="info-card">
-                    <h3>4. Autoconciencia</h3>
-                    <p>El último peldaño evolutivo, puramente hipotético y teórico. Representaría a una Inteligencia Artificial que no solo comprende estados emocionales externos, sino que posee conciencia de su propia existencia, tiene sentimientos propios, autocrítica, deseos independientes y necesidades autónomas. Actualmente, este concept pertenece de forma exclusiva a las narrativas de la ciencia ficción cinematográfica.</p>
+    <!-- 2. TESTIMONIOS Y PRUEBA SOCIAL -->
+    <section id="testimonios" class="section container">
+        <h2>Casos de Éxito y Opiniones</h2>
+        <div class="grid-3">
+            <div class="testimonial-card">
+                <p>"Aprender a estructurar prompts cambió por completo la forma en que trabajo. Reduje a la mitad el tiempo que dedicaba a redactar estrategias."</p>
+                <div class="user-info">
+                    <div class="avatar">MA</div>
+                    <div>
+                        <h4 style="font-size: 0.95rem;">Miguel Ángel C.</h4>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Consultor Digital</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 5. GLOSARIO E INTRODUCCIÓN TÉCNICA -->
-    <section class="info-section alt-bg">
-        <div class="container">
-            <h2>Conceptos Clave del Mundo Digital</h2>
-            <p class="section-intro">Para comprender el lenguaje de la industria y moverte con soltura profesional, es vital dominar el significado técnico de sus pilares más importantes:</p>
-            
-            <div class="grid-info">
-                <div class="info-card">
-                    <h3>Machine Learning</h3>
-                    <p><strong>Aprendizaje Automático.</strong> Es la rama de la IA dedicada a hacer que las computadoras aprendan de forma autónoma sin necesidad de ser programadas con instrucciones explícitas de código estático. En su lugar, se diseñan algoritmos que estudian bases de datos masivas, extraen sus patrones matemáticos internos de forma automatizada y mejoran su precisión con cada ciclo de procesamiento.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Deep Learning</h3>
-                    <p><strong>Aprendizaje Profundo.</strong> Una subcategoría avanzada del Machine Learning basada en el diseño de redes neuronales artificiales profundas. Se estructura mediante múltiples capas de procesamiento numérico capaces de extraer características abstractas y masivas de archivos sumamente complejos, tales como archivos de audio crudos, video en tiempo real o documentos de texto sin estructurar.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Redes Neuronales Artificiales</h3>
-                    <p>Modelos matemáticos computacionales inspirados directamente en la interconexión de las neuronas biológicas del cerebro humano. Consisten en miles de nodos (neuronas artificiales) organizados en capas que se transmiten señales ponderadas numéricamente entre sí, ajustando su peso matemático de forma iterativa cada vez que cometen un error de predicción.</p>
-                </div>
-                <div class="info-card">
-                    <h3>NLP (Procesamiento del Lenguaje Natural)</h3>
-                    <p>La disciplina enfocada en otorgar a las máquinas la capacidad de leer, descifrar, comprender y estructurar el lenguaje humano conversacional de manera orgánica. Gracias al NLP, sistemas como los Large Language Models (LLMs) pueden captar intenciones, ironías, contextos gramaticales y semánticos complejos en lugar de tratar los textos como simples cadenas de caracteres rígidas.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Visión por Computadora</h3>
-                    <p>El campo de estudio que entrena a las computadoras para interpretar, procesar y extraer información del mundo visual. Mediante el uso de cámaras corporativas y algoritmos de Deep Learning, los sistemas pueden identificar rostros con precisión milimétrica, clasificar objetos en líneas de ensamblaje industrial, detectar anomalías médicas en radiografías y guiar robots autónomos de forma segura.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Ingeniería de Prompts</h3>
-                    <p>El arte y la ciencia de diseñar, estructurar y refinar las instrucciones de texto de entrada que se le envían a un modelo de IA generativa. Los ingenieros de prompts se especializan en formular consultas lógicas optimizadas para extraer el máximo rendimiento de los modelos matemáticos de lenguaje, reduciendo drásticamente las tasas de error o alucinación del software.</p>
+            <div class="testimonial-card">
+                <p>"Buscaba cursos avanzados para profesionalizarme en IA y las recomendaciones me guiaron directo a lo que necesitaba sin perder dinero."</p>
+                <div class="user-info">
+                    <div class="avatar">LR</div>
+                    <div>
+                        <h4 style="font-size: 0.95rem;">Laura R.</h4>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Creadora de Contenido</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 6. LA IA EN LAS DIFERENTES INDUSTRIAS -->
-    <section class="info-section">
-        <div class="container">
-            <h2>El Impacto de la IA en la Sociedad</h2>
-            <p class="section-intro">La inteligencia artificial ya no es un proyecto de laboratorio para el mañana; es el motor operativo que optimiza los sectores más críticos de la economía global en el presente:</p>
-            
-            <div class="grid-info">
-                <div class="info-card">
-                    <h3>🩺 Medicina de Precisión</h3>
-                    <p>En el sector salud, los algoritmos predictivos actúan como un segundo par de ojos infalibles para los especialistas médicos. La IA es capaz de analizar miles de imágenes diagnósticas (resonancias, tomografías) en segundos, detectando indicios tempranos de patologías crónicas antes de que sean visibles al ojo humano. Además, en los laboratorios farmacológicos, acelera el descubrimiento e investigación de nuevas moléculas químicas operativas, reduciendo los tiempos de experimentación de años a semanas.</p>
-                </div>
-                <div class="info-card">
-                    <h3>💼 Automatización de Negocios</h3>
-                    <p>En el plano corporativo, las empresas implementan IA para erradicar las tareas administrativas repetitivas que consumen el capital humano. Los sistemas automatizados auditan reportes financieros complejos, gestionan inventarios predictivos cruzando históricos de ventas con el clima global y optimizan las complejas cadenas de suministro logístico. Esto permite liberar tiempo de valor para que los equipos humanos se enfoquen en la negociación estratégica y en la innovación de productos.</p>
-                </div>
-                <div class="info-card">
-                    <h3>🎓 Educación Personalizada</h3>
-                    <p>La educación tradicional a menudo sufre por las aulas masivas y estandarizadas. La IA resuelve esto actuando como un tutor privado interactivo e inteligente disponible las 24 horas del día. Los algoritmos educativos evalúan en tiempo real los patrones de aprendizaje, las fortalezas conceptuales y los baches informativos de cada estudiante en particular, adaptando el ritmo, los cuestionarios y el material didáctico para maximizar la retención cognitiva de forma individualizada.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. MITOS VS. REALIDADES -->
-    <section class="info-section alt-bg">
-        <div class="container">
-            <h2>Mitos vs. Realidades de la Inteligencia Artificial</h2>
-            <p class="section-intro">La rápida adopción de estas tecnologías ha generado desinformación generalizada. Es momento de separar las narrativas alarmistas de las realidades operativas comprobables:</p>
-            
-            <div class="grid-info">
-                <div class="info-card">
-                    <h3>Mito: "Las máquinas tienen sentimientos"</h3>
-                    <p><strong>Realidad:</strong> Modelos como ChatGPT o Claude redactan textos con un tono que aparenta profunda empatía y raciocinio humano, pero carecen de conciencia biológica, emociones, intenciones o dolor. Sus respuestas no provienen de un alma digital, sino de cálculos probabilísticos ultra sofisticados diseñados para determinar secuencialmente cuál es la palabra más coherente que debe seguir a la anterior basándose en miles de millones de textos indexados.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Mito: "La IA nos reemplazará por completo"</h3>
-                    <p><strong>Realidad:</strong> La IA no está destruyendo el empleo en masa, está transformando radicalmente la naturaleza del trabajo operativo. Las herramientas no te quitarán tu puesto laboral; lo hará un profesional de tu mismo sector que entienda cómo utilizarlas para producir el triple de resultados en la mitad de tiempo. La IA potencia las facultades humanas individuales, delegando el procesamiento pesado al software y reservando la creatividad al humano.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Mito: "La IA siempre tiene la razón"</h3>
-                    <p><strong>Realidad:</strong> Los modelos de lenguaje masivo padecen un fenómeno técnico denominado "alucinación". Cuando un sistema no posee datos fidedignos u objetivos sobre una consulta extremadamente específica, su algoritmo probabilístico estructurará una respuesta completamente inventada, pero con una redacción lógica y convincente. La supervisión profesional y el pensamiento crítico humano siguen siendo estrictamente obligatorios.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Mito: "La IA es una inteligencia universal e infalible"</h3>
-                    <p><strong>Realidad:</strong> Los sistemas actuales corresponden a lo que la ciencia define como IA Débil o Estrecha. Esto significa que son extraordinariamente sobresalientes ejecutando una tarea específica para la cual fueron entrenados de forma directa (por ejemplo, analizar hojas de cálculo o redactar correos), pero son completamente inútiles si se les saca de su marco operativo o si se les pide improvisar fuera de sus datos.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Mito: "La IA genera ingresos automáticos sin esfuerzo"</h3>
-                    <p><strong>Realidad:</strong> No existen los ingresos mágicos por internet gracias a la IA. La tecnología no es un cajero automático; es un multiplicador de productividad empresarial. Quienes generan ingresos legítivos usándola lo hacen porque la aplican para optimizar flujos reales: redactar mejores propuestas comerciales, programar software en tiempo récord o analizar nichos de mercado con datos duros. Requiere estudio y esfuerzo real.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Mito: "La IA aprende sola del entorno sin supervisión"</h3>
-                    <p><strong>Realidad:</strong> Los sistemas de IA requieren de un proceso inicial masivo de filtrado, etiquetado y curaduría de datos que es ejecutado minuciosamente por ingenieros y científicos de datos humanos. Sin el entrenamiento estructurado inicial y la constante retroalimentación basada en el comportamiento humano (RLHF), los algoritmos se corromperían rápidamente y perderían toda su utilidad práctica.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. GUÍA DE CÓMO ESCRIBIR TU PRIMER PROMPT PROFESIONAL -->
-    <section class="info-section">
-        <div class="container">
-            <h2>Domina el Arte de Dar Instrucciones</h2>
-            <p class="section-intro">La diferencia entre un usuario casual y un profesional de la IA radica exclusivamente en la calidad de sus directrices escritas. A continuación, se detalla la estructura lógica infalible para redactar un <strong>Prompt</strong> de alto rendimiento laboral:</p>
-            
-            <div class="grid-info">
-                <div class="info-card" style="grid-column: span 3; text-align: left;">
-                    <p>Para extraer respuestas profesionales y evitar resultados genéricos o erróneos de los modelos lingüísticos, tu instrucción debe contener estos cuatro pilares clave perfectamente delimitados dentro del texto:</p>
-                    <ul style="margin: 25px 0 25px 25px; color:#cbd5e1;">
-                        <li style="margin-bottom: 12px;"><strong>1. Rol / Identidad Profesional:</strong> Define claramente la especialidad o profesión que el modelo debe adoptar. Esto acota el vocabulario técnico y los sesgos lógicos de la respuesta. <em>(Ejemplo: "Actúa como un consultor senior de negocios y estratega financiero").</em></li>
-                        <li style="margin-bottom: 12px;"><strong>2. Contexto Detallado y Fronteras:</strong> Proporciona todos los antecedentes necesarios sobre el problema, el público objetivo y la situación real. Evita la ambigüedad. <em>(Ejemplo: "Tengo una pequeña empresa de desarrollo de software local que busca migrar al modelo SaaS, pero cuenta con un presupuesto de marketing muy reducido").</em></li>
-                        <li style="margin-bottom: 12px;"><strong>3. Tarea Específica a Ejecutar:</strong> Explica de forma directa la acción exacta que requieres que el sistema realice por ti. Utiliza verbos imperativos. <em>(Ejemplo: "Diseña un plan de acción de 3 pasos lógicos para captar los primeros 10 clientes corporativos").</em></li>
-                        <li style="margin-bottom: 12px;"><strong>4. Formato de Salida y Restricciones:</strong> Determina la estructura estética y visual en la que deseas leer los resultados, el tono conversacional y los límites. <em>(Ejemplo: "Entrega la información organizada en una tabla con columnas dedicadas a: Estrategia, Coste estimado y Métrica de éxito. Utiliza un tono corporativo y persuasivo").</em></li>
-                    </ul>
-                    <p><strong>Ejemplo consolidado de un Prompt Profesional Avanzado:</strong></p>
-                    <div class="prompt-box">
-                        "Actúa como un especialista en retención de talento y recursos humanos. El contexto es que lidero un equipo técnico remoto de 15 desarrolladores de software que están manifestando síntomas de agotamiento laboral debido a entregas consecutivas. Diseña una estrategia de bienestar interno con 4 dinámicas prácticas que no interfieran con el horario de desarrollo de código. Preséntame las propuestas estructuradas en una lista con viñetas, detallando el beneficio esperado y la duración estimada para cada actividad sugerida."
+            <div class="testimonial-card">
+                <p>"La selección de herramientas y recursos que ofrecen es clave para quienes queremos crear productos digitales de forma rápida."</p>
+                <div class="user-info">
+                    <div class="avatar">JS</div>
+                    <div>
+                        <h4 style="font-size: 0.95rem;">Javier S.</h4>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Emprendedor</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 9. HERRAMIENTAS GRATUITAS Y SIN LÍMITES -->
-    <section class="info-section alt-bg">
-        <div class="container">
-            <h2>Herramientas de IA 100% Gratuitas</h2>
-            <p class="section-intro">El acceso al ecosistema de la Inteligencia Artificial se ha democratizado por completo. No requieres desembolsar dinero para integrar estas potentes plataformas profesionales en tu día a día laboral:</p>
-            
-            <div class="grid-info">
-                <div class="info-card">
-                    <h3>ChatGPT (OpenAI)</h3>
-                    <p>El estándar internacional en procesamiento de lenguaje natural. Su versión de acceso libre es una herramienta sumamente sólida para redactar borradores de contratos, resumir reportes densos de cientos de páginas, traducir textos técnicos con precisión contextual y servir de soporte lógico en el autoaprendizaje de materias complejas.</p>
-                    <span class="app-badge">Texto y Análisis</span>
+    <!-- 1. SECCIÓN DE MONETIZACIÓN Y CURSOS RECOMENDADOS (HOTMART) -->
+    <section id="cursos" class="section container">
+        <h2>Cursos Avanzados Recomendados</h2>
+        <p style="text-align: center; max-width: 600px; margin: -20px auto 40px auto;">Acelera tu aprendizaje con los programas de formación mejor valorados del mercado digital.</p>
+        
+        <div class="grid-courses">
+            <!-- 10 Tarjetas Preparadas para Hotmart -->
+            <div class="course-card">
+                <div>
+                    <h3>Master en Ingeniería de Prompts</h3>
+                    <p>Aprende a dominar ChatGPT, Claude y LLMs avanzados para automatizar procesos y tareas complejas.</p>
                 </div>
-                <div class="info-card">
-                    <h3>Claude (Anthropic)</h3>
-                    <p>Reconocido unánimemente en la industria por poseer una de las redacciones en lenguaje natural más fluidas, orgánicas y con un tono profundamente humano del mercado. Su fuerte radica en la capacidad analítica para desglosar documentos de código lógicos complejos y realizar tareas de redacción que requieran matices narrativos avanzados.</p>
-                    <span class="app-badge">Redacción Creativa</span>
+                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
+            </div>
+            <div class="course-card">
+                <div>
+                    <h3>IA Aplicada al E-commerce</h3>
+                    <p>Optimiza tu tienda en línea, descripciones de productos y atención al cliente usando modelos automatizados.</p>
                 </div>
-                <div class="info-card">
-                    <h3>Microsoft Copilot</h3>
-                    <p>Una suite sumamente potente integrada directamente con los motores de búsqueda avanzados de Microsoft. Te otorga acceso sin coste a modelos de procesamiento lingüístico premium de última generación y permite la creación de imágenes comerciales profesionales a partir de simples instrucciones descriptivas en español.</p>
-                    <span class="app-badge">Búsqueda e Imágenes</span>
+                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
+            </div>
+            <div class="course-card">
+                <div>
+                    <h3>Creación de Contenido con IA</h3>
+                    <p>Genera imágenes, guiones e ideas virales para redes sociales a una velocidad 10x utilizando Inteligencia Artificial.</p>
                 </div>
-                <div class="info-card">
-                    <h3>Canva e IA de Diseño</h3>
-                    <p>La plataforma líder en diseño ágil incorpora un abanico robusto de funciones asistidas por IA en su capa gratuita. Los usuarios pueden expandir encuadres fotográficos mediante relleno generativo, vectorizar elementos, eliminar imperfecciones visuales con un solo clic o traducir piezas de comunicación gráfica en segundos.</p>
-                    <span class="app-badge">Diseño Gráfico</span>
+                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
+            </div>
+            <div class="course-card">
+                <div>
+                    <h3>Negocios Digitales y Automatización</h3>
+                    <p>Construye flujos de trabajo inteligentes que trabajen por ti utilizando herramientas no-code e Inteligencia Artificial.</p>
                 </div>
+                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
+            </div>
+            <div class="course-card">
+                <div>
+                    <h3>ChatGPT para Marketing Digital</h3>
+                    <p>Diseña campañas, copys vendedores y estrategias SEO guiadas paso a paso por inteligencia artificial.</p>
+                </div>
+                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
+            </div>
+            <div class="course-card">
+                <div>
+                    <h3>Generación de Imágenes Profesionales</h3>
+                    <p>Domina herramientas de creación visual como Midjourney y DALL-E para diseños publicitarios de alto impacto.</p>
+                </div>
+                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
+            </div>
+            <div class="course-card">
+                <div>
+                    <h3>Agentes de IA y Automatización</h3>
+                    <p>Configura asistentes virtuales capaces de ejecutar tareas autónomas para tu proyecto o negocio.</p>
+                </div>
+                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
+            </div>
+            <div class="course-card">
+                <div>
+                    <h3>SEO Avanzado asistido por IA</h3>
+                    <p>Aumenta el tráfico orgánico de tu sitio web auditando y creando contenido optimizado mediante inteligencia artificial.</p>
+                </div>
+                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
+            </div>
+            <div class="course-card">
+                <div>
+                    <h3>Productividad Extrema con IA</h3>
+                    <p>Organiza tu día a día, resume documentos y delega tus tareas administrativas a asistentes inteligentes.</p>
+                </div>
+                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
+            </div>
+            <div class="course-card">
+                <div>
+                    <h3>Desarrollo Web asistido por IA</h3>
+                    <p>Crea páginas web y herramientas digitales sin conocimientos de programación usando generadores de código de última generación.</p>
+                </div>
+                <a href="#" class="btn" target="_blank" rel="noopener">VER CURSO COMPLETO</a>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE TESTIMONIOS -->
-    <section class="info-section">
-        <div class="container">
-            <h2>Casos de Éxito y Experiencias Reales</h2>
-            <p class="section-intro">Descubre cómo profesionales de diversos sectores han utilizado el conocimiento técnico sobre Inteligencia Artificial para potenciar su rendimiento y abrir nuevos horizontes laborales reales:</p>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Como redactora de contenidos independiente, sentía que pasaba demasiadas horas investigando antes de poder escribir una sola línea. Tras aprender a estructurar prompts avanzados, implementé la IA como mi asistente de investigación inicial. No delegué mi escritura a la máquina, sino que aceleré mi flujo. Ahora atiendo al doble de clientes sin descuidar la calidad."</p>
-                    <div class="testimonial-author">Elena Rostova</div>
-                    <div class="testimonial-role">Redactora Freelance & Copywriter</div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Tengo una pequeña tienda de comercio electrónico y el presupuesto para marketing digital siempre era una limitante. Empecé a utilizar herramientas generativas de IA de forma estructurada para programar mis calendarios de publicación, analizar las opiniones de mis compradores y refinar mis anuncios de texto. La conversión mejoró notablemente gracias a la optimización de los datos."</p>
-                    <div class="testimonial-author">Carlos Mendoza</div>
-                    <div class="testimonial-role">Fundador de EcoTienda</div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"En mi agencia inmobiliaria perdíamos días valiosos categorizando datos de propiedades y redactando fichas técnicas repetitivas. Diseñamos un flujo interno con automatizaciones básicas de IA y hojas de cálculo. El tiempo de respuesta hacia los clientes interesados cayó drásticamente, permitiéndonos cerrar tratos comerciales mucho más rápido."</p>
-                    <div class="testimonial-author">Javier Ortiz</div>
-                    <div class="testimonial-role">Director de Consultoría Inmobiliaria</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 10. FORMACIÓN AVANZADA -->
-    <section class="courses-section">
-        <div class="container">
-            <h2>Lleva tus Habilidades al Siguiente Nivel</h2>
-            <p class="courses-intro">La teoría básica es solo el punto de partida. Si buscas especializarte, optimizar tus procesos productivos y adquirir competencias técnicas altamente cotizadas en la economía moderna, te sugerimos explorar estos entrenamientos avanzados disponibles en Hotmart. Sin falsas promesas de riqueza instantánea, solo educación rigurosa y aplicable.</p>
-            
-            <div class="grid-courses">
-                <!-- CURSO 1 -->
-                <div class="course-card">
-                    <h3>Programa Experto en Inteligencia Artificial</h3>
-                    <p>Una inmersión profunda y completa en el panorama corporativo actual de la IA. Aprenderás a dominar de extremo a extremo las aplicaciones prácticas que están reconfigurando el mercado global, dotándote de un entendimiento técnico integral apto para liderar la adopción tecnológica en empresas.</p>
-                    <a href="https://go.hotmart.com/E106799285I?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
-                </div>
-
-                <!-- CURSO 2 -->
-                <div class="course-card">
-                    <h3>Masterclass de IA Aplicada</h3>
-                    <p>Un taller enfocado enteramente en la acción y en la optimización de tus flujos diarios de trabajo. Descubre cómo interconectar herramientas avanzadas en tu rutina profesional, eliminando los cuellos de botella operativos y multiplicando tu eficiencia en la gestión de proyectos diarios.</p>
-                    <a href="https://go.hotmart.com/Y106799339O?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
-                </div>
-
-                <!-- CURSO 3 -->
-                <div class="course-card">
-                    <h3>Especialización Profesional en IA</h3>
-                    <p>El programa técnico definitivo para quienes se niegan a ser usuarios promedio. Diseñado específicamente para dominar flujos de trabajo avanzados, lógicas de programación asistidas, desarrollo de automatizaciones complejas y optimización de rendimiento a nivel empresarial.</p>
-                    <a href="https://go.hotmart.com/R106799263S?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
-                </div>
-
-                <!-- CURSO 4 -->
-                <div class="course-card">
-                    <h3>Entrenamiento de Futuro y Tecnología</h3>
-                    <p>Aprende a anticipar con base en datos las tendencias tecnológicas dominantes que marcarán la pauta en los próximos años. Una formación diseñada para consultores y directivos que necesitan blindar su relevancia en el mercado y dominar el ecosistema digital del mañana.</p>
-                    <a href="https://go.hotmart.com/V106799234C?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
-                </div>
-
-                <!-- CURSO 5 -->
-                <div class="course-card">
-                    <h3>Curso Intensivo de Prompts Profesionales</h3>
-                    <p>Aprende las metodologías avanzadas de ingeniería de prompts para dialogar de manera experta con modelos de lenguaje masivo (LLMs). Domina técnicas como Few-Shot Chain-of-Thought para erradicar las alucinaciones de la IA y obtener respuestas de altísima precisión corporativa.</p>
-                    <a href="https://go.hotmart.com/H106799345K?ap=eb1f" target="_blank" class="btn-course">Ver detalles del curso</a>
-                </div>
-
-                <!-- CURSO 6 -->
-                <div class="course-card">
-                    <h3>IA para Marketing Digital</h3>
-                    <p>Descubre cómo aplicar el análisis predictivo y las herramientas generativas para estructurar campañas publicitarias de alto rendimiento. Aprende a segmentar audiencias masivas con datos precisos, optimizar textos persuasivos (copywriting) y estructurar embudos de venta eficientes.</p>
-                    <a href="https://go.hotmart.com/H106799354H?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
-                </div>
-
-                <!-- CURSO 7 -->
-                <div class="course-card">
-                    <h3>Automatización Empresarial con IA</h3>
-                    <p>Aprende a conectar herramientas de IA con tus plataformas operativas diarias (CRM, hojas de cálculo, correos electrónicos). Elimina las tareas administrativas repetitivas de tu negocio estructurando flujos de trabajo autónomos que operan de forma impecable las 24 horas.</p>
-                    <a href="https://go.hotmart.com/W106799221D?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
-                </div>
-
-                <!-- CURSO 8 -->
-                <div class="course-card">
-                    <h3>Generación de Contenido Creativo con IA</h3>
-                    <p>Domina las suites generativas de vanguardia para producir materiales audiovisuales e ilustrativos con calidad comercial. Una formación diseñada para diseñadores, creadores y profesionales de la comunicación que buscan acelerar sus procesos de producción artística.</p>
-                    <a href="https://go.hotmart.com/Y106799252H?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
-                </div>
-
-                <!-- CURSO 9 -->
-                <div class="course-card">
-                    <h3>Análisis de Datos con Machine Learning</h3>
-                    <p>Adquiere la habilidad técnica de traducir filas interminables de datos crudos en decisiones estratégicas de negocio altamente lucrativas. Aprenderás las bases del procesamiento estadístico y algoritmos predictivos para identificar oportunidades comerciales reales.</p>
-                    <a href="https://go.hotmart.com/T106799518U?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
-                </div>
-
-                <!-- CURSO 10 -->
-                <div class="course-card">
-                    <h3>IA aplicada a Finanzas Personales</h3>
-                    <p>Utiliza herramientas analíticas avanzadas para auditar tus flujos de caja, modelar escenarios de ahorro realistas y estructurar proyecciones presupuestarias detalladas. Aprende a delegar el control técnico de tus finanzas en sistemas de datos para una toma de decisiones informada.</p>
-                    <a href="https://go.hotmart.com/X106799512T?dp=1" target="_blank" class="btn-course">Ver detalles del curso</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PIE DE PÁGINA -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Horizonte IA. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <!-- SCRIPTS DE BREVO Y FUNCIONALIDAD DE COPIAR PROMPTS -->
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = 'Elige un código de país';
+      window.LOCALE = 'es';
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "La información que has proporcionado no es válida. Compruebe el formato del campo e inténtalo de nuevo.";
+      window.REQUIRED_ERROR_MESSAGE = "Este campo no puede quedarse vacío. ";
+      window.GENERIC_INVALID_MESSAGE = "La información que has proporcionado no es válida. Compruebe el formato del campo e inténtalo de nuevo.";
+      window.INVALID_NUMBER = "La información que has proporcionado no es válida. Compruebe el formato del campo e inténtalo de nuevo.";
+      window.INVALID_DATE = "Introduce una fecha válida";
+      window.REQUIRED_MULTISELECT_MESSAGE = 'Selecciona al menos una opción';
+      window.translation = {
+        common: {
+          selectedList: '{quantity} lista seleccionada',
+          selectedLists: '{quantity} listas seleccionadas',
+          selectedOption: '{quantity} seleccionado',
+          selectedOptions: '{quantity} seleccionados',
+        }
+      };
+      var AUTOHIDE = Boolean(0);
+    </script>
+
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+    <script>
+        function copyPrompt(elementId, buttonElement) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = buttonElement.innerText;
+                buttonElement.innerText = '¡Copiado!';
+                buttonElement.style.backgroundColor = 'var(--success-green)';
+                buttonElement.style.color = '#000';
+                
+                setTimeout(() => {
+                    buttonElement.innerText = originalText;
+                    buttonElement.style.backgroundColor = 'var(--border-color)';
+                    buttonElement.style.color = 'var(--text-main)';
+                }, 2000);
+            }).catch(err => {
+                console.error('Error al copiar el texto: ', err);
+            });
+        }
+    </script>
 </body>
 </html>
