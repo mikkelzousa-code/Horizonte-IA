@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://conocedoresia.com/sitemap.xml
