@@ -315,17 +315,28 @@ details[open].acc-item summary .plus{transform:rotate(45deg); border-color:var(-
   display:inline-block; margin-top:12px; font-size:11px; font-family:var(--font-mono);
   padding:4px 10px; border-radius:100px; background:var(--surface-2); color:var(--text-faint);
 }
+.tabs-nav label .badge-new{
+  font-family:var(--font-mono); font-size:9px; background:var(--amber); color:var(--bg);
+  padding:2px 6px; border-radius:100px; margin-left:6px; vertical-align:middle;
+}
+.caution-box{
+  background:var(--amber-soft); border:1px solid rgba(245,166,35,0.35); border-radius:var(--radius-md);
+  padding:22px 26px; margin-bottom:36px; font-size:14.5px; color:var(--text-dim);
+}
+.caution-box strong{color:var(--amber);}
 
 #tab-1:checked ~ .tabs-nav label[for="tab-1"],
 #tab-2:checked ~ .tabs-nav label[for="tab-2"],
 #tab-3:checked ~ .tabs-nav label[for="tab-3"],
-#tab-4:checked ~ .tabs-nav label[for="tab-4"]{
+#tab-4:checked ~ .tabs-nav label[for="tab-4"],
+#tab-5:checked ~ .tabs-nav label[for="tab-5"]{
   background:var(--gradient-1); color:#fff; border-color:transparent;
 }
 #tab-1:checked ~ .panels #panel-1,
 #tab-2:checked ~ .panels #panel-2,
 #tab-3:checked ~ .panels #panel-3,
-#tab-4:checked ~ .panels #panel-4{display:block;}
+#tab-4:checked ~ .panels #panel-4,
+#tab-5:checked ~ .panels #panel-5{display:block;}
 
 /* ---------- PROMPTS: ANTES / DESPUÉS ---------- */
 .prompt-compare{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:40px;}
@@ -438,6 +449,7 @@ footer{background:var(--bg-soft); border-top:1px solid var(--border); padding:80
       <a href="#anatomia">Cómo funciona</a>
       <a href="#directorio">Herramientas</a>
       <a href="#prompts">Prompts</a>
+      <a href="#ingresos">Ingresos reales</a>
       <a href="#cursos">Especialízate</a>
     </div>
     <a href="#hero-form" class="nav-cta">Guía gratis</a>
@@ -448,6 +460,7 @@ footer{background:var(--bg-soft); border-top:1px solid var(--border); padding:80
     <a href="#anatomia">Cómo funciona</a>
     <a href="#directorio">Herramientas</a>
     <a href="#prompts">Prompts</a>
+    <a href="#ingresos">Ingresos reales</a>
     <a href="#cursos">Especialízate</a>
     <a href="#hero-form" class="nav-cta" style="text-align:center;">Guía gratis</a>
   </div>
@@ -606,6 +619,7 @@ footer{background:var(--bg-soft); border-top:1px solid var(--border); padding:80
         <p>Preferimos enseñarte a pescar: entender el porqué de cada herramienta para que sigas siendo relevante cuando la próxima "IA revolucionaria" aparezca.</p>
       </div>
     </div>
+    <p style="margin-top:32px; font-size:14.5px; color:var(--text-dim);"><a href="ia-me-va-a-quitar-el-trabajo.html" style="color:var(--blue);">→ ¿Te preocupa que la IA te quite el trabajo? Aquí una respuesta honesta, sin alarmismo</a></p>
   </div>
 </section>
 
@@ -771,6 +785,7 @@ footer{background:var(--bg-soft); border-top:1px solid var(--border); padding:80
         </div>
       </details>
     </div>
+    <p style="margin-top:24px; font-size:14.5px;"><a href="que-es-una-alucinacion-de-ia.html" style="color:var(--blue);">→ Guía completa: cómo detectar una alucinación de IA antes de que te cueste caro</a></p>
   </div>
 </section>
 
@@ -780,19 +795,21 @@ footer{background:var(--bg-soft); border-top:1px solid var(--border); padding:80
     <div class="section-head">
       <span class="eyebrow">Mapa del ecosistema</span>
       <h2>Las herramientas que de verdad importan hoy.</h2>
-      <p>Clasificación honesta, sin recomendar 40 apps redundantes. Solo lo que aporta.</p>
+      <p>Clasificación honesta, sin recomendar 40 apps redundantes. Solo lo que aporta — incluyendo la nueva ola de agentes que ya no solo responden, sino que ejecutan tareas por ti.</p>
     </div>
 
     <input type="radio" name="tabs" id="tab-1" class="tabs-input" checked>
     <input type="radio" name="tabs" id="tab-2" class="tabs-input">
     <input type="radio" name="tabs" id="tab-3" class="tabs-input">
     <input type="radio" name="tabs" id="tab-4" class="tabs-input">
+    <input type="radio" name="tabs" id="tab-5" class="tabs-input">
 
     <div class="tabs-nav">
       <label for="tab-1">Productividad</label>
       <label for="tab-2">Creación de contenido</label>
       <label for="tab-3">Desarrollo</label>
       <label for="tab-4">Análisis de datos</label>
+      <label for="tab-5">Agentes y Automatización <span class="badge-new">NUEVO</span></label>
     </div>
 
     <div class="panels">
@@ -825,6 +842,18 @@ footer{background:var(--bg-soft); border-top:1px solid var(--border); padding:80
           <div class="tool-card"><div class="tool-logo"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h4>Julius AI</h4><p>Análisis de datos y hojas de cálculo mediante lenguaje natural.</p><span class="honest-tag">Datos</span></div>
         </div>
       </div>
+      <div class="tab-panel" id="panel-5">
+        <p style="color:var(--text-dim); font-size:14.5px; max-width:640px; margin-bottom:24px;">
+          Un asistente como ChatGPT o Claude te <em>responde</em> cuando le preguntas. Un <strong style="color:var(--text);">agente</strong> va un paso más allá: puede leer un correo, decidir qué hacer con él, mover datos entre dos apps distintas y avisarte solo cuando termina, sin que tú estés dando cada instrucción una por una. Estas herramientas conectan y automatizan procesos completos, no solo generan texto.
+        </p>
+        <div class="tools-grid">
+          <div class="tool-card"><div class="tool-logo"><svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg></div><h4>Make</h4><p>Conecta tus apps (correo, hojas de cálculo, redes sociales) en flujos visuales que se ejecutan solos, sin escribir código.</p><span class="honest-tag">No-code</span></div>
+          <div class="tool-card"><div class="tool-logo"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div><h4>Zapier</h4><p>El pionero de la automatización entre apps: "cuando pase X, haz Y" — con miles de aplicaciones ya conectadas.</p><span class="honest-tag">No-code</span></div>
+          <div class="tool-card"><div class="tool-logo"><svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2"/><circle cx="18" cy="7" r="2"/><circle cx="12" cy="18" r="2"/><path d="M6 9l6 7M18 9l-6 7M8 7h8"/></svg></div><h4>CrewAI</h4><p>Orquesta varios "agentes" de IA que se reparten tareas entre sí, como un equipo, para resolver un problema complejo.</p><span class="honest-tag">Requiere algo de código</span></div>
+          <div class="tool-card"><div class="tool-logo"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="6" height="4" rx="1"/><rect x="15" y="4" width="6" height="4" rx="1"/><rect x="9" y="16" width="6" height="4" rx="1"/><path d="M6 8v4h12V8M12 12v4"/></svg></div><h4>Langflow</h4><p>Diseña flujos de agentes de IA arrastrando bloques visuales, ideal si quieres experimentar sin programar desde cero.</p><span class="honest-tag">No-code / low-code</span></div>
+          <div class="tool-card"><div class="tool-logo"><svg viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="12" cy="12" r="2"/><path d="M6.5 6l4 4M17.5 6l-4 4M12 14v3"/></svg></div><h4>n8n</h4><p>Alternativa de código abierto a Zapier/Make, con más control técnico para quien quiere personalizar cada paso.</p><span class="honest-tag">Open source</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -852,6 +881,61 @@ footer{background:var(--bg-soft); border-top:1px solid var(--border); padding:80
       </div>
     </div>
     <p style="color:var(--text-dim); font-size:15px; max-width:680px;">Este método se conoce como <strong style="color:var(--text);">RCTR</strong>: cuanto más específico seas en estas cuatro dimensiones, menos "adivinará" el modelo y más se acercará tu primer resultado a lo que realmente necesitas.</p>
+    <p style="margin-top:16px; font-size:14.5px;"><a href="como-escribir-mejores-prompts.html" style="color:var(--blue);">→ Guía completa con más ejemplos: marketing, código, redacción y análisis de datos</a></p>
+  </div>
+</section>
+
+<!-- ============ INGRESOS REALES SIN PROGRAMAR ============ -->
+<section id="ingresos" class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Dinero real, no promesas</span>
+      <h2>Sitios donde de verdad se paga por tu tiempo, no por tus ilusiones.</h2>
+      <p>Nada de "hazte rico con IA en una semana". Esto son plataformas reales donde empresas pagan por microtareas, anotación de datos y pruebas — ingreso extra honesto, no un reemplazo de tu trabajo principal.</p>
+    </div>
+
+    <div class="caution-box">
+      <strong>Antes de empezar:</strong> una plataforma legítima nunca te pide pagar para empezar a trabajar, ni te promete cifras fijas de "ganancia garantizada". El pago es real pero modesto, varía según cuánto tiempo le dediques, y funciona mejor como ingreso complementario y constante que como plan para "dejar tu empleo la próxima semana" — el mismo principio de disciplina que ya viste al inicio de esta página.
+    </div>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-logo"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11"/></svg></div>
+        <h4>Outlier / DataAnnotation.tech</h4>
+        <p>Empresas de IA pagan por revisar y calificar respuestas de modelos de lenguaje. Se paga por tarea completada; requiere buen nivel de lectura y criterio.</p>
+        <span class="honest-tag">Anotación de datos</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-logo"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h4>Appen / Telus International AI</h4>
+        <p>Dos de las empresas más grandes del mundo dedicadas a entrenar modelos de IA con ayuda humana: etiquetado de imágenes, transcripción, evaluación de búsquedas.</p>
+        <span class="honest-tag">Anotación de datos</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-logo"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2"/></svg></div>
+        <h4>Toloka / Clickworker</h4>
+        <p>Plataformas de microtareas: pequeñas tareas de minutos (clasificar, transcribir, verificar) que se acumulan en pagos según volumen.</p>
+        <span class="honest-tag">Microtareas</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-logo"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 9l3 3-3 3"/></svg></div>
+        <h4>Amazon Mechanical Turk</h4>
+        <p>El "abuelo" de las microtareas en línea, operado por Amazon. Miles de tareas pequeñas publicadas por empresas de todo el mundo, pago por tarea.</p>
+        <span class="honest-tag">Microtareas</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-logo"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></div>
+        <h4>Prolific</h4>
+        <p>En vez de microtareas, participas en estudios y encuestas académicas o de investigación de mercado. Pagos claros antes de empezar cada estudio.</p>
+        <span class="honest-tag">Estudios y encuestas</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-logo"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 3v9l6 3"/></svg></div>
+        <h4>UserTesting / Testlio</h4>
+        <p>Empresas pagan por grabarte usando una app o sitio web y narrando en voz alta lo que piensas — pruebas de usabilidad reales, sin experiencia técnica previa.</p>
+        <span class="honest-tag">Pruebas de usuario</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -979,7 +1063,11 @@ footer{background:var(--bg-soft); border-top:1px solid var(--border); padding:80
         <h5>Aprender</h5>
         <ul>
           <li><a href="#prompts">Ingeniería de prompts</a></li>
+          <li><a href="#ingresos">Ingresos reales</a></li>
           <li><a href="#cursos">Rutas de especialización</a></li>
+          <li><a href="ia-me-va-a-quitar-el-trabajo.html">¿La IA me quitará el trabajo?</a></li>
+          <li><a href="como-escribir-mejores-prompts.html">Guía de prompts (con ejemplos)</a></li>
+          <li><a href="que-es-una-alucinacion-de-ia.html">Qué es una alucinación de IA</a></li>
         </ul>
       </div>
       <div>

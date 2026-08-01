@@ -1,0 +1,88 @@
+/* ============================================================
+   Conocedores IA — hoja de estilos compartida para páginas legales
+   Reutiliza los mismos tokens del sitio principal para que
+   Aviso de Privacidad / Términos / Afiliados se vean consistentes.
+   ============================================================= */
+:root{
+  --bg:            #0B0E14;
+  --bg-soft:       #10141F;
+  --surface:       #131826;
+  --border:        #262E44;
+  --text:          #E8EAF0;
+  --text-dim:      #8891A8;
+  --text-faint:    #5B6478;
+  --blue:          #4C8DFF;
+  --violet:        #8B5CF6;
+  --gradient-1:    linear-gradient(135deg,var(--blue) 0%,var(--violet) 100%);
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+  --maxw: 760px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{
+  background:var(--bg); color:var(--text); font-family:var(--font-body);
+  line-height:1.7; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--blue); text-decoration:underline; text-underline-offset:2px;}
+a:hover{color:var(--violet);}
+header{
+  border-bottom:1px solid var(--border); padding:20px 24px;
+}
+.logo{
+  font-family:var(--font-display); font-weight:800; font-size:18px; color:var(--text);
+  text-decoration:none; display:inline-flex; align-items:center; gap:10px; max-width:var(--maxw); margin:0 auto;
+}
+.header-inner{max-width:var(--maxw); margin:0 auto; display:flex; align-items:center; justify-content:space-between;}
+.back-link{font-size:14px; color:var(--text-dim); text-decoration:none;}
+.back-link:hover{color:var(--text);}
+main{max-width:var(--maxw); margin:0 auto; padding:64px 24px 100px;}
+.eyebrow{
+  font-family:var(--font-mono); font-size:13px; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--violet); display:block; margin-bottom:14px;
+}
+h1{font-family:var(--font-display); font-size:clamp(28px,4vw,40px); font-weight:800; margin-bottom:12px; letter-spacing:-0.02em;}
+.updated{color:var(--text-faint); font-size:13.5px; font-family:var(--font-mono); margin-bottom:48px;}
+h2{font-family:var(--font-display); font-size:22px; font-weight:700; margin:40px 0 14px;}
+h3{font-family:var(--font-display); font-size:17px; font-weight:700; margin:24px 0 10px; color:var(--text);}
+p{color:var(--text-dim); font-size:15.5px; margin-bottom:16px;}
+ul, ol{color:var(--text-dim); font-size:15.5px; margin:0 0 16px 22px;}
+li{margin-bottom:8px;}
+strong{color:var(--text); font-weight:600;}
+.placeholder{
+  background:rgba(245,166,35,0.1); color:#F5A623; padding:2px 8px; border-radius:6px;
+  font-family:var(--font-mono); font-size:13.5px; border:1px dashed rgba(245,166,35,0.4);
+}
+.note-box{
+  background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--violet);
+  border-radius:0 12px 12px 0; padding:20px 24px; margin:32px 0; font-size:14.5px; color:var(--text-dim);
+}
+footer{border-top:1px solid var(--border); padding:32px 24px; text-align:center;}
+footer p{max-width:var(--maxw); margin:0 auto; font-size:13px; color:var(--text-faint);}
+
+/* ---- Componentes para artículos ---- */
+.article-meta{display:flex; gap:16px; flex-wrap:wrap; font-family:var(--font-mono); font-size:13px; color:var(--text-faint); margin-bottom:40px;}
+.toc{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:22px 26px; margin-bottom:40px;}
+.toc .toc-label{margin-bottom:10px; font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--violet); display:block;}
+.toc ol{margin:0 0 0 20px; font-size:14.5px;}
+.toc li{margin-bottom:6px;}
+.toc a{text-decoration:none;}
+.toc a:hover{text-decoration:underline;}
+.cta-box{
+  background:var(--surface); border:1px solid var(--border); border-radius:16px;
+  padding:32px; margin:48px 0; text-align:center;
+}
+.cta-box h3{margin-top:0; font-size:20px;}
+.cta-box p{margin-bottom:20px;}
+.btn-primary{
+  background:var(--gradient-1); color:#fff; font-weight:700; font-size:15px;
+  padding:14px 28px; border-radius:100px; text-decoration:none; display:inline-block;
+}
+.btn-primary:hover{color:#fff;}
+.pull{
+  border-left:3px solid var(--violet); background:var(--surface); border-radius:0 12px 12px 0;
+  padding:18px 22px; margin:28px 0; font-size:15px; color:var(--text);
+}
+.related{margin-top:56px; padding-top:32px; border-top:1px solid var(--border);}
+.related h5{font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-faint); margin-bottom:14px;}
+.related a{display:block; font-size:15px; margin-bottom:8px;}

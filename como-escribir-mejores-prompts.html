@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo escribir mejores prompts: guía práctica con ejemplos (RCTR) — Conocedores IA</title>
+<meta name="description" content="Guía práctica para escribir prompts que funcionan a la primera, con el método RCTR y ejemplos reales en marketing, código, redacción y análisis de datos.">
+<link rel="canonical" href="https://conocedoresia.com/como-escribir-mejores-prompts.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cómo escribir mejores prompts: guía práctica con ejemplos">
+<meta property="og:description" content="El método RCTR explicado con ejemplos reales en marketing, código, redacción y análisis de datos.">
+<meta property="og:image" content="assets/og-cover.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/legal.css">
+<style>
+  .prompt-ex{
+    font-family:var(--font-mono); font-size:13.5px; line-height:1.7; border-radius:12px; padding:20px 22px; margin:16px 0;
+  }
+  .prompt-ex.bad{background:rgba(255,90,90,0.06); border:1px solid rgba(255,90,90,0.25);}
+  .prompt-ex.good{background:var(--blue-soft, rgba(76,141,255,0.1)); border:1px solid rgba(76,141,255,0.3);}
+  .prompt-ex .tag{font-family:var(--font-body); font-weight:700; font-size:12.5px; text-transform:uppercase; display:block; margin-bottom:8px;}
+  .prompt-ex.bad .tag{color:#ff8080;}
+  .prompt-ex.good .tag{color:var(--blue);}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">Conocedores IA</a>
+    <a href="index.html" class="back-link">← Volver al sitio</a>
+  </div>
+</header>
+
+<main>
+  <span class="eyebrow">Guía práctica</span>
+  <h1>Cómo escribir mejores prompts: guía con ejemplos reales.</h1>
+  <div class="article-meta">
+    <span>Lectura de 7 minutos</span>
+    <span>·</span>
+    <span>Actualizado 29 de julio de 2026</span>
+  </div>
+
+  <p>La diferencia entre una respuesta mediocre y una que puedes usar directamente casi nunca está en el modelo — está en cómo se lo pides. Aquí va el método completo, con ejemplos de distintas áreas para que lo adaptes a la tuya.</p>
+
+  <div class="toc">
+    <span class="toc-label">En esta guía</span>
+    <ol>
+      <li><a href="#metodo">El método RCTR explicado</a></li>
+      <li><a href="#marketing">Ejemplo: marketing</a></li>
+      <li><a href="#codigo">Ejemplo: código</a></li>
+      <li><a href="#redaccion">Ejemplo: redacción</a></li>
+      <li><a href="#datos">Ejemplo: análisis de datos</a></li>
+      <li><a href="#errores">Errores comunes al escribir prompts</a></li>
+    </ol>
+  </div>
+
+  <h2 id="metodo">El método RCTR explicado</h2>
+  <p>RCTR son las cuatro cosas que un prompt experto define, y que uno vago deja a la suerte:</p>
+  <ul>
+    <li><strong>Rol</strong> — quién debe "actuar" el modelo (esto ajusta el vocabulario, el enfoque y el nivel de profundidad de la respuesta).</li>
+    <li><strong>Contexto</strong> — la información específica de tu situación que el modelo no puede adivinar.</li>
+    <li><strong>Tarea</strong> — qué quieres exactamente como resultado, no solo el tema general.</li>
+    <li><strong>Restricciones</strong> — qué NO quieres, qué límites tiene (extensión, tono, formato, lo que sea).</li>
+  </ul>
+  <p>Entre más específico seas en estas cuatro dimensiones, menos tiene que "adivinar" el modelo — y menos vueltas vas a dar para llegar a algo usable.</p>
+
+  <h2 id="marketing">Ejemplo: marketing</h2>
+  <div class="prompt-ex bad">
+    <span class="tag">✕ Vago</span>
+    "Escríbeme algo sobre marketing digital para mi negocio."
+  </div>
+  <div class="prompt-ex good">
+    <span class="tag">✓ Con RCTR</span>
+    "Actúa como estratega de marketing digital con experiencia en pymes [Rol]. Tengo una cafetería local en una ciudad mediana, presupuesto reducido [Contexto]. Dame un plan de 3 publicaciones semanales para Instagram durante un mes [Tarea]. Tono cercano, sin tecnicismos, sin estrategias de pago [Restricciones]."
+  </div>
+
+  <h2 id="codigo">Ejemplo: código</h2>
+  <div class="prompt-ex bad">
+    <span class="tag">✕ Vago</span>
+    "Ayúdame con una función en Python para validar correos."
+  </div>
+  <div class="prompt-ex good">
+    <span class="tag">✓ Con RCTR</span>
+    "Actúa como desarrollador backend senior en Python [Rol]. Estoy construyendo un formulario de registro para un sitio con Django [Contexto]. Escribe una función que valide formato de correo y explique cada línea con un comentario [Tarea]. Sin dependencias externas, compatible con Python 3.10+ [Restricciones]."
+  </div>
+
+  <h2 id="redaccion">Ejemplo: redacción</h2>
+  <div class="prompt-ex bad">
+    <span class="tag">✕ Vago</span>
+    "Escribe una descripción de producto."
+  </div>
+  <div class="prompt-ex good">
+    <span class="tag">✓ Con RCTR</span>
+    "Actúa como copywriter de e-commerce [Rol]. Vendo mochilas para laptop hechas de material reciclado, dirigidas a estudiantes universitarios [Contexto]. Escribe una descripción de producto de máximo 80 palabras que destaque el material sustentable [Tarea]. Tono joven pero sin jerga forzada, sin signos de exclamación excesivos [Restricciones]."
+  </div>
+
+  <h2 id="datos">Ejemplo: análisis de datos</h2>
+  <div class="prompt-ex bad">
+    <span class="tag">✕ Vago</span>
+    "Analiza estos datos de ventas."
+  </div>
+  <div class="prompt-ex good">
+    <span class="tag">✓ Con RCTR</span>
+    "Actúa como analista de datos [Rol]. Te comparto ventas mensuales de los últimos 12 meses de una tienda de ropa [Contexto]. Identifica los 3 meses con mayor caída y una posible explicación para cada uno [Tarea]. Responde en una tabla, sin fórmulas técnicas, explicado para alguien sin experiencia en estadística [Restricciones]."
+  </div>
+
+  <h2 id="errores">Errores comunes al escribir prompts</h2>
+  <ul>
+    <li><strong>Pedir todo en una sola frase gigante.</strong> Es mejor dividir tareas complejas en pasos, y pedirle al modelo el primer paso antes de continuar.</li>
+    <li><strong>No decir qué NO quieres.</strong> Si no pones restricciones, el modelo elige por ti — y no siempre acierta con lo que tenías en mente.</li>
+    <li><strong>No iterar.</strong> El primer resultado casi nunca es el final. Pídele ajustes concretos ("hazlo más corto", "cambia el ejemplo 2") en vez de reescribir todo desde cero.</li>
+    <li><strong>Asumir que el modelo recuerda contexto de otra conversación.</strong> Cada conversación nueva empieza en blanco — si necesitas ese contexto, tienes que dárselo otra vez.</li>
+  </ul>
+
+  <div class="cta-box">
+    <h3>Lleva esto un paso más allá</h3>
+    <p>Nuestro Kit de Prompts gratuito incluye 30 ejemplos ya estructurados con RCTR, listos para copiar y adaptar.</p>
+    <a href="index.html#hero-form" class="btn-primary">Descargar el Kit gratis →</a>
+  </div>
+
+  <div class="related">
+    <h5>Sigue explorando</h5>
+    <a href="index.html#anatomia">→ El vocabulario técnico de la IA, explicado sin jerga</a>
+    <a href="index.html#directorio">→ El directorio de herramientas de IA que de verdad importan</a>
+    <a href="que-es-una-alucinacion-de-ia.html">→ Qué es una alucinación de IA y cómo detectarla</a>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Conocedores IA. <a href="index.html">Volver al inicio</a></p>
+</footer>
+</body>
+</html>
